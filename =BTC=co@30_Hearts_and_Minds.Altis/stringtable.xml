@@ -757,12 +757,12 @@
                 <French>FOB, Rallypoint, Hélicoptère de transport, Véhicule de transport et Leader</French>
                 <Czech>FOB, Rallypoint, Transportní vrtulník, Transportní vozidlo a Leader</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_RESP_FOBHELIVEHILEADER">
-                <Original>FOB, Transport helicopter, Transport vehicle and Leader</Original>
-                <German>FOB, Transporthubschrauber, Transportfahrzeuge and Gruppenführer</German>
-                <Chinesesimp>FOB, Transport helicopter, Transport vehicle and Leader</Chinesesimp>
-                <French>FOB, Hélicoptère de transport, Véhicule de transport et Leader</French>
-                <Czech>FOB, Transportní vrtulník, Transportní vozidlo a Leader</Czech>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELIVEHIPLAYER">
+                <Original>FOB, Transport helicopter, Transport vehicle and Player</Original>
+                <German>FOB, Transport helicopter, Transport vehicle and Player</German>
+                <Chinesesimp>FOB, Transport helicopter, Transport vehicle and Player</Chinesesimp>
+                <French>FOB, Hélicoptère de transport, Véhicule de transport et Player</French>
+                <Czech>FOB, Transportní vrtulník, Transportní vozidlo a Player</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_RALLYTIMER">
                 <Original>Time before rallypoint self-destruction:</Original>
@@ -2126,13 +2126,6 @@
                 <Chinesesimp>重新部署至集合点</Chinesesimp>
                 <French>Se redéployer au point de ralliement</French>
                 <Czech>Znovu rozmístěte shromažďovací body</Czech>
-            </Key>
-            <Key ID="STR_BTC_HAM_ACTION_REDEPLOYFOB">
-                <Original>Re-deploy FOB/vehicles</Original>
-                <German>Wiedereinstieg FOB/Fahrzeugen</German>
-                <Chinesesimp>重新部署至FOB/载具</Chinesesimp>
-                <French>Se redéployer sur FOB/vehicles</French>
-                <Czech>Znovu nasadit FOB/vozidla</Czech>
             </Key>
         </Container>
         <Container name="Action : Arsenal (BIS)">

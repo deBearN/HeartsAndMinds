@@ -351,6 +351,7 @@ if (!isDedicated) then {
     btc_fob_fnc_rallypointAssemble = compileScript ["core\fnc\fob\rallypointAssemble.sqf"];
     btc_fob_fnc_redeploy = compileScript ["core\fnc\fob\redeploy.sqf"];
     btc_fob_fnc_redeployCheck = compileScript ["core\fnc\fob\redeployCheck.sqf"];
+    btc_fob_fnc_addInteraction = compileScript ["core\fnc\fob\addInteraction.sqf"];
 
     //INT
     btc_int_fnc_add_actions = compileScript ["core\fnc\int\add_actions.sqf"];
@@ -406,7 +407,6 @@ if (!isDedicated) then {
     btc_respawn_fnc_screen = compileScript ["core\fnc\respawn\screen.sqf"];
     btc_respawn_fnc_force = compileScript ["core\fnc\respawn\force.sqf"];
     btc_respawn_fnc_intro = compileScript ["core\fnc\respawn\intro.sqf"];
-    btc_respawn_fnc_addInteraction = compileScript ["core\fnc\respawn\addInteraction.sqf"];
 
     //SPECT
     btc_spect_fnc_updateDevice = compileScript ["core\fnc\spect\updateDevice.sqf"];

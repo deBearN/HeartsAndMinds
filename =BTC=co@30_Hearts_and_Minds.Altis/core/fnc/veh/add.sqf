@@ -75,6 +75,6 @@ if (fullCrew [_veh, "cargo", true] isNotEqualTo []) then {
         (btc_p_respawn_fromOutsideBase isEqualTo 3) && (_veh isKindOf "Air") ||
         btc_p_respawn_fromOutsideBase > 3
     ) then {
-        [_veh, false] remoteExecCall ["btc_respawn_fnc_addInteraction", [0, -2] select isDedicated, _veh];
+        [_veh, false] remoteExecCall ["btc_fob_fnc_addInteraction", [0, -2] select isDedicated, _veh];
     };
 };
