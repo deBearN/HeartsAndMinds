@@ -88,4 +88,17 @@ if (btc_p_respawn_location > 0) then {
     };
 };
 
-[_vehicle, false] remoteExecCall ["btc_respawn_fnc_addInteraction", [0, -2] select isDedicated, _vehicle];
+if (fullCrew [_vehicle, "cargo", true] isNotEqualTo []) then {
+    if (btc_p_respawn_location > 0) then {
+        [
+            _vehicle,
+            "Deleted",
+            {_thisArgs call BIS_fnc_removeRespawnPosition},
+            [btc_player_side, _vehicle] call BIS_fnc_addRespawnPosition
+        ] call CBA_fnc_addBISEventHandler;
+    };
+
+    if (btc_p_respawn_location > 1) then {
+        [_vehicle, false] remoteExecCall ["btc_respawn_fnc_addInteraction", [0, -2] select isDedicated, _vehicle];
+    };
+};

@@ -193,7 +193,7 @@ if (btc_debug) then {
 
 //Re-deploy
 [btc_gear_object] call btc_respawn_fnc_addInteraction;
-if (btc_p_respawn_fromFOBToBase) then {
+if (btc_p_respawn_fromOutsideBase > 0) then {
     [btc_fob_flag] call btc_respawn_fnc_addInteraction;
 };
 

@@ -687,12 +687,12 @@
                 <French>Emplacements de réapparition disponibles:</French>
                 <Czech>Dostupná místa obnovení:</Czech>
             </Key>
-            <Key ID="STR_BTC_HAM_RESP_FOBTOBASE">
-                <Original>Allow respawn from FOB to base:</Original>
-                <German>Erlaube Respawn von FOB zur Basis:?</German>
-                <Chinesesimp>允许从FOB重新部署至基地</Chinesesimp>
-                <French>Autoriser la réapparition sur FOB à la base:</French>
-                <Czech>Povolit respawn z FOB na základnu:</Czech>
+            <Key ID="STR_BTC_HAM_RESP_OUTSIDEBASE">
+                <Original>Enable respawn menu access from outside the base:</Original>
+                <German>Enable respawn menu access from outside the base:</German>
+                <Chinesesimp>Enable respawn menu access from outside the base:</Chinesesimp>
+                <French>Enable respawn menu access from outside the base:</French>
+                <Czech>Enable respawn menu access from outside the base:</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLY">
                 <Original>FOB and Rallypoint</Original>
@@ -701,12 +701,26 @@
                 <French>FOB et Rallypoint</French>
                 <Czech>FOB and Rallypoint</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOB">
+                <Original>FOB</Original>
+                <German>FOB</German>
+                <Chinesesimp>FOB</Chinesesimp>
+                <French>FOB</French>
+                <Czech>FOB</Czech>
+            </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELO">
                 <Original>FOB, Rallypoint and Helo</Original>
                 <German>FOB, Ralleypoints und Helo</German>
                 <Chinesesimp>FOB、集合点和可重生载具</Chinesesimp>
                 <French>FOB, Rallypoint et Helo</French>
                 <Czech>FOB, Rallypoint and Helo</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELO">
+                <Original>FOB and Helo</Original>
+                <German>FOB und Helo</German>
+                <Chinesesimp>FOB and Helo</Chinesesimp>
+                <French>FOB et Helo</French>
+                <Czech>FOB and Helo</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELI">
                 <Original>FOB, Rallypoint and Transport helicopter</Original>
@@ -715,6 +729,13 @@
                 <French>FOB, Rallypoint, Hélicoptère de transport</French>
                 <Czech>FOB, Rallypoint a Transportní vrtulník</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELI">
+                <Original>FOB and Transport helicopter</Original>
+                <German>FOB und Transporthubschrauber</German>
+                <Chinesesimp>FOB and Transport helicopter</Chinesesimp>
+                <French>FOB et Hélicoptère de transport</French>
+                <Czech>FOB a Transportní vrtulník</Czech>
+            </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELIVEHI">
                 <Original>FOB, Rallypoint, Transport helicopter and Transport vehicle</Original>
                 <German>FOB, Rallypoints, Transporthubschrauber und Transportfahrzeuge</German>
@@ -722,12 +743,26 @@
                 <French>FOB, Rallypoint, Hélicoptère de transport, Véhicule de transport</French>
                 <Czech>FOB, Rallypoint, Transportní vrtulník a Transportní vozidlo</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELIVEHI">
+                <Original>FOB, Transport helicopter and Transport vehicle</Original>
+                <German>FOB, Transporthubschrauber und Transportfahrzeuge</German>
+                <Chinesesimp>FOB, Transport helicopter and Transport vehicle</Chinesesimp>
+                <French>FOB, Hélicoptère de transport, Véhicule de transport</French>
+                <Czech>FOB, Transportní vrtulník a Transportní vozidlo</Czech>
+            </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLYHELIVEHILEADER">
                 <Original>FOB, Rallypoint, Transport helicopter, Transport vehicle and Leader</Original>
                 <German>FOB, Rallypoint, Transporthubschrauber, Transportfahrzeuge and Gruppenführer</German>
                 <Chinesesimp>FOB、集合点、运输直升机、运输车辆和小队长</Chinesesimp>
                 <French>FOB, Rallypoint, Hélicoptère de transport, Véhicule de transport et Leader</French>
                 <Czech>FOB, Rallypoint, Transportní vrtulník, Transportní vozidlo a Leader</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_FOBHELIVEHILEADER">
+                <Original>FOB, Transport helicopter, Transport vehicle and Leader</Original>
+                <German>FOB, Transporthubschrauber, Transportfahrzeuge and Gruppenführer</German>
+                <Chinesesimp>FOB, Transport helicopter, Transport vehicle and Leader</Chinesesimp>
+                <French>FOB, Hélicoptère de transport, Véhicule de transport et Leader</French>
+                <Czech>FOB, Transportní vrtulník, Transportní vozidlo a Leader</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_RALLYTIMER">
                 <Original>Time before rallypoint self-destruction:</Original>
