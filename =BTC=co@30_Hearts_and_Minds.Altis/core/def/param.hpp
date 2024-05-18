@@ -81,7 +81,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_OUTSIDEBASE"]);
         values[]={0,1,2,3,4,5};
         texts[]={$STR_DISABLED, $STR_BTC_HAM_RESP_FOB, $STR_BTC_HAM_RESP_FOBHELO, $STR_BTC_HAM_RESP_FOBHELI, $STR_BTC_HAM_RESP_FOBHELIVEHI, $STR_BTC_HAM_RESP_FOBHELIVEHIPLAYER};
-        default = 5;
+        default = 0;
     };
     class btc_p_respawn_location { // Respawn locations available:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_LOCATION"]);
