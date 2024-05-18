@@ -406,6 +406,7 @@ if (!isDedicated) then {
     btc_respawn_fnc_screen = compileScript ["core\fnc\respawn\screen.sqf"];
     btc_respawn_fnc_force = compileScript ["core\fnc\respawn\force.sqf"];
     btc_respawn_fnc_intro = compileScript ["core\fnc\respawn\intro.sqf"];
+    btc_respawn_fnc_addInteraction = compileScript ["core\fnc\respawn\addInteraction.sqf"];
 
     //SPECT
     btc_spect_fnc_updateDevice = compileScript ["core\fnc\spect\updateDevice.sqf"];

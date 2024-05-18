@@ -72,3 +72,5 @@ if (btc_p_respawn_location > 1) then {
         };
     };
 };
+
+[_veh, false] remoteExecCall ["btc_respawn_fnc_addInteraction", [0, -2] select isDedicated, _veh];

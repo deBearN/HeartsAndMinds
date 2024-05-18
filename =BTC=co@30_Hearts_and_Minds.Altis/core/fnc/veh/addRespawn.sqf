@@ -87,3 +87,5 @@ if (btc_p_respawn_location > 0) then {
         ] call CBA_fnc_addBISEventHandler;
     };
 };
+
+[_vehicle, false] remoteExecCall ["btc_respawn_fnc_addInteraction", [0, -2] select isDedicated, _vehicle];
