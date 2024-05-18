@@ -77,17 +77,17 @@ class Params {
         texts[]={""};
         default = 0;
     };
+    class btc_p_respawn_fromOutsideBase { // Enable respawn menu access from outside the base:
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_OUTSIDEBASE"]);
+        values[]={0,1,2,3,4,5};
+        texts[]={$STR_DISABLED, $STR_BTC_HAM_RESP_FOB, $STR_BTC_HAM_RESP_FOBHELO, $STR_BTC_HAM_RESP_FOBHELI, $STR_BTC_HAM_RESP_FOBHELIVEHI, $STR_BTC_HAM_RESP_FOBHELIVEHILEADER};
+        default = 0;
+    };
     class btc_p_respawn_location { // Respawn locations available:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_LOCATION"]);
         values[]={0,1,2,3,4};
         texts[]={$STR_BTC_HAM_RESP_FOBRALLY, $STR_BTC_HAM_RESP_FOBRALLYHELO, $STR_BTC_HAM_RESP_FOBRALLYHELI, $STR_BTC_HAM_RESP_FOBRALLYHELIVEHI, $STR_BTC_HAM_RESP_FOBRALLYHELIVEHILEADER};
         default = 4;
-    };
-    class btc_p_respawn_fromFOBToBase { // Allow respawn from FOB to base:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_FOBTOBASE"]);
-        values[]={0,1};
-        texts[]={$STR_DISABLED, $STR_ENABLED};
-        default = 0;
     };
     class btc_p_rallypointTimer { // Time before rallypoint self-destruction:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_RALLYTIMER"]);
