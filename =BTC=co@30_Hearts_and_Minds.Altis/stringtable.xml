@@ -761,7 +761,7 @@
                 <Original>FOB, Transport helicopter, Transport vehicle and Player</Original>
                 <German>FOB, Transport helicopter, Transport vehicle and Player</German>
                 <Chinesesimp>FOB, Transport helicopter, Transport vehicle and Player</Chinesesimp>
-                <French>FOB, Hélicoptère de transport, Véhicule de transport et Player</French>
+                <French>FOB, Hélicoptère de transport, Véhicule de transport et Joueur</French>
                 <Czech>FOB, Transportní vrtulník, Transportní vozidlo a Player</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_RALLYTIMER">
@@ -770,6 +770,13 @@
                 <Chinesesimp>集合点自毁时间:</Chinesesimp>
                 <French>Temps avant l'autodestruction du point de ralliement:</French>
                 <Czech>Doba před sebezničením shromažďovacího bodu:</Czech>
+            </Key>
+            <Key ID="STR_BTC_HAM_ACTION_REDEPLOYFOB">
+                <Original>Re-deploy FOB/vehicles</Original>
+                <German>Wiedereinstieg FOB/Fahrzeugen</German>
+                <Chinesesimp>重新部署至FOB/载具</Chinesesimp>
+                <French>Se redéployer sur FOB/vehicles</French>
+                <Czech>Znovu nasadit FOB/vozidla</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TICKETSATSTART">
                 <Original>Number of tickets at mission start:</Original>
