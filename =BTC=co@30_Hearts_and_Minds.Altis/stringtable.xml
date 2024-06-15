@@ -694,6 +694,13 @@
                 <French>Enable respawn menu access from outside the base:</French>
                 <Czech>Enable respawn menu access from outside the base:</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_RESP_OUTSIDETIMEOUT">
+                <Original>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</Original>
+                <German>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</German>
+                <Chinesesimp>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</Chinesesimp>
+                <French>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</French>
+                <Czech>Add a 1 min timeout for accessing the respawn menu on vehicle and player:</Czech>
+            </Key>
             <Key ID="STR_BTC_HAM_RESP_FOBRALLY">
                 <Original>FOB and Rallypoint</Original>
                 <German>FOB und Ralleypoints</German>

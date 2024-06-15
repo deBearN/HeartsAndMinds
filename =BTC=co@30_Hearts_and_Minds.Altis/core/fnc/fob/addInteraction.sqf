@@ -8,6 +8,7 @@ Description:
 Parameters:
     _veh - Vehicle to add in wreck system. [Object, String]
     _isFull - Full respawn menu. [Bool]
+    _timeout - Enable timeout for interaction. [Bool]
     _typeNum - Type of action, 0 for actions, 1 for self-actions [Number]
     _parentPath - Parent path of the new action. [Array]
 
@@ -26,6 +27,7 @@ Author:
 params [
     ["_veh", objNull, [objNull, ""]],
     ["_isFull", true, [true]],
+    ["_timeout", false, [false]],
     ["_typeNum", 0, [0]],
     ["_parentPath", ["ACE_MainActions"], [[]]]
 ];
@@ -35,6 +37,14 @@ private _condition = {
     !btc_log_placing &&
     !(player getVariable ["ace_dragging_isCarrying", false]) &&
     alive _target
+};
+if (_timeout) then {
+    _condition = {
+        !btc_log_placing &&
+        !(player getVariable ["ace_dragging_isCarrying", false]) &&
+        alive _target &&
+        CBA_missionTime < btc_fob_timeout
+    };
 };
 
 if (_isFull) then {

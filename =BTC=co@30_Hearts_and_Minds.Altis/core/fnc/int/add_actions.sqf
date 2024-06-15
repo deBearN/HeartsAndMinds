@@ -197,7 +197,7 @@ if (btc_p_respawn_fromOutsideBase > 0) then {
     [btc_fob_flag] call btc_fob_fnc_addInteraction;
 };
 if (btc_p_respawn_fromOutsideBase > 4) then {
-    [player, false, 1, ["ACE_SelfActions"]] call btc_fob_fnc_addInteraction;
+    [player, false, btc_p_respawn_fromOutsideTimeout, 1, ["ACE_SelfActions"]] call btc_fob_fnc_addInteraction;
 };
 
 //Arsenal

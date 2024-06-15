@@ -83,6 +83,12 @@ class Params {
         texts[]={$STR_DISABLED, $STR_BTC_HAM_RESP_FOB, $STR_BTC_HAM_RESP_FOBHELO, $STR_BTC_HAM_RESP_FOBHELI, $STR_BTC_HAM_RESP_FOBHELIVEHI, $STR_BTC_HAM_RESP_FOBHELIVEHIPLAYER};
         default = 0;
     };
+    class btc_p_respawn_fromOutsideTimeout { // Add a 1 min timeout for accessing the respawn menu on vehicle and player:
+        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_OUTSIDETIMEOUT"]);
+        values[]={0,1};
+        texts[]={$STR_DISABLED, $STR_ENABLED};
+        default = 0;
+    };
     class btc_p_respawn_location { // Respawn locations available:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_LOCATION"]);
         values[]={0,1,2,3,4};
