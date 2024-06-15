@@ -31,36 +31,34 @@ params [
 ];
 
 private _actions = [];
+private _condition = {
+    !btc_log_placing &&
+    !(player getVariable ["ace_dragging_isCarrying", false]) &&
+    alive _target
+};
+
 if (_isFull) then {
     _actions pushBack ["redeploy", localize "STR_BTC_HAM_ACTION_BIRESPAWN", "\A3\ui_f\data\igui\cfg\simpleTasks\types\run_ca.paa", {
         if ([] call btc_fob_fnc_redeployCheck) then {
             [] call btc_respawn_fnc_force;
         };
-    }, {
-        !btc_log_placing &&
-        !(player getVariable ["ace_dragging_isCarrying", false]) &&
-        alive _target
-    }];
+    }, _condition];
 };
 _actions pushBack ["base", localize "STR_BTC_HAM_ACTION_REDEPLOYBASE", getText (configfile >> "CfgMarkers" >> getMarkerType "btc_base" >> "icon"), {
     if ([] call btc_fob_fnc_redeployCheck) then {
         [_player, btc_respawn_marker, false] call BIS_fnc_moveToRespawnPosition
     };
-}, {
-    !btc_log_placing && 
-    !(player getVariable ["ace_dragging_isCarrying", false]) &&
-    alive _target
-}, btc_fob_fnc_redeploy, "Base"];
+}, _condition, btc_fob_fnc_redeploy, "Base"];
 
 if (_isFull) then {
     _actions pushBack ["rallypoints", localize "STR_BTC_HAM_ACTION_REDEPLOYRALLY", 
         "\A3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa", {}, 
-        {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])},
+        _condition,
         btc_fob_fnc_redeploy, ""
     ];
     _actions pushBack ["FOB", localize "STR_BTC_HAM_ACTION_REDEPLOYFOB",
         "\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa", {},
-        {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])}
+        _condition
     ];
 };
 
