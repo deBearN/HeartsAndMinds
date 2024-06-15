@@ -53,8 +53,15 @@ _actions pushBack ["base", localize "STR_BTC_HAM_ACTION_REDEPLOYBASE", getText (
 }, btc_fob_fnc_redeploy, "Base"];
 
 if (_isFull) then {
-    _actions pushBack ["rallypoints", localize "STR_BTC_HAM_ACTION_REDEPLOYRALLY", "\A3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa", {}, {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])}, btc_fob_fnc_redeploy, ""];
-    _actions pushBack ["FOB", localize "STR_BTC_HAM_ACTION_REDEPLOYFOB", "\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa", {}, {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])}];
+    _actions pushBack ["rallypoints", localize "STR_BTC_HAM_ACTION_REDEPLOYRALLY", 
+        "\A3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa", {}, 
+        {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])},
+        btc_fob_fnc_redeploy, ""
+    ];
+    _actions pushBack ["FOB", localize "STR_BTC_HAM_ACTION_REDEPLOYFOB",
+        "\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa", {},
+        {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])}
+    ];
 };
 
 {
@@ -70,11 +77,17 @@ if (_isFull) then {
     {
         _x params ["_cardinal", "_degrees"];
 
-        _action = ["FOB" + _cardinal, localize _cardinal, "\A3\ui_f\data\igui\cfg\simpleTasks\types\map_ca.paa", {}, {alive _target}, btc_fob_fnc_redeploy, _degrees] call ace_interact_menu_fnc_createAction;
+        _action = ["FOB" + _cardinal, localize _cardinal,
+            "\A3\ui_f\data\igui\cfg\simpleTasks\types\map_ca.paa", {},
+            {alive _target}, btc_fob_fnc_redeploy, _degrees
+        ] call ace_interact_menu_fnc_createAction;
         if (_veh isEqualType "") then {
             [_veh, _typeNum, _parentPath + ["FOB"], _action] call ace_interact_menu_fnc_addActionToClass;
         } else {
             [_veh, _typeNum, _parentPath + ["FOB"], _action] call ace_interact_menu_fnc_addActionToObject;
         };
-    } forEach [["str_q_north_east", [0, 90]], ["str_q_south_east", [90, 180]], ["str_q_south_west", [180, 270]], ["str_q_north_west", [270, 360]]];
+    } forEach [
+        ["str_q_north_east", [0, 90]], ["str_q_south_east", [90, 180]],
+        ["str_q_south_west", [180, 270]], ["str_q_north_west", [270, 360]]
+    ];
 };
