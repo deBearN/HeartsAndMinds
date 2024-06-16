@@ -25,7 +25,7 @@ btc_p_change_weather = ("btc_p_change_weather" call BIS_fnc_getParamValue) isEqu
 //<< Respawn options >>
 btc_p_respawn_location = "btc_p_respawn_location" call BIS_fnc_getParamValue;
 btc_p_respawn_fromOutsideBase = "btc_p_respawn_fromOutsideBase" call BIS_fnc_getParamValue;
-btc_p_respawn_fromOutsideTimeout = ("btc_p_respawn_fromOutsideTimeout" call BIS_fnc_getParamValue) isEqualTo 1;
+btc_p_respawn_fromOutsideTimeout = "btc_p_respawn_fromOutsideTimeout" call BIS_fnc_getParamValue;
 btc_p_rallypointTimer = "btc_p_rallypointTimer" call BIS_fnc_getParamValue;
 btc_p_respawn_arsenal = ("btc_p_respawn_arsenal" call BIS_fnc_getParamValue) isEqualTo 1;
 btc_p_respawn_ticketsAtStart = "btc_p_respawn_ticketsAtStart" call BIS_fnc_getParamValue;

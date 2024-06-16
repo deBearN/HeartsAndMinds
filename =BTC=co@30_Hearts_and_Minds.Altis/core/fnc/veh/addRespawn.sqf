@@ -89,6 +89,6 @@ if (fullCrew [_vehicle, "cargo", true] isNotEqualTo []) then {
     };
 
     if (btc_p_respawn_location > 1) then {
-        [_vehicle, false] remoteExecCall ["btc_fob_fnc_addInteraction", [0, -2] select isDedicated, _vehicle];
+        [_vehicle, false, btc_p_respawn_fromOutsideTimeout >= 4] remoteExecCall ["btc_fob_fnc_addInteraction", [0, -2] select isDedicated, _vehicle];
     };
 };

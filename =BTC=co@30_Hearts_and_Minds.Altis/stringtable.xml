@@ -778,6 +778,21 @@
                 <French>Temps avant l'autodestruction du point de ralliement:</French>
                 <Czech>Doba před sebezničením shromažďovacího bodu:</Czech>
             </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTFOBHELIVEHIPLAYER">
+                <Original>FOB, Helo, Transport helicopter, Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTFOBHELOVEHIPLAYER">
+                <Original>Helo, Transport helicopter, Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTHELIVEHIPLAYER">
+                <Original>Transport helicopter, Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTVEHIPLAYER">
+                <Original>Transport vehicle and Player</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_RESP_TIMEOUTPLAYER">
+                <Original>Player</Original>
+            </Key>
             <Key ID="STR_BTC_HAM_ACTION_REDEPLOYFOB">
                 <Original>Re-deploy FOB/vehicles</Original>
                 <German>Wiedereinstieg FOB/Fahrzeugen</German>
