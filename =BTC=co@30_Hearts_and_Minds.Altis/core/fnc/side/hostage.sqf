@@ -130,3 +130,5 @@ if !(alive _captive) exitWith {
 40 call btc_rep_fnc_change;
 
 [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
+
+deleteMarker _area;
