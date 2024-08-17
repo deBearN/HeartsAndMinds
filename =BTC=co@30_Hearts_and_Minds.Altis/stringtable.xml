@@ -1914,7 +1914,7 @@
         </Container>
         <Container name="Pandemic">
             <Key ID="STR_BTC_HAM_SIDE_PANDEMIC_TITLE">
-                <Original>Contaminate civilians in %1</Original>
+                <Original>Contaminated civilians in %1</Original>
                 <German>Kontaminierte Zivilisten bei %1</German>
                 <Chinesesimp>%1 地区的平民受到感染</Chinesesimp>
                 <Czech>Kontaminovaný civilisti v %1</Czech>
@@ -2955,7 +2955,7 @@
                 <Czech>Úkryt %1 zničen</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_O_EH_HDCACHE_MRK">
-                <Original>Cached %1 destroyed</Original>
+                <Original>Cache %1 destroyed</Original>
                 <Spanish>Cache %1 destruído</Spanish>
                 <German>Waffenlager %1 wurde zerstört</German>
                 <Portuguese>Depósito %1 destruído</Portuguese>
