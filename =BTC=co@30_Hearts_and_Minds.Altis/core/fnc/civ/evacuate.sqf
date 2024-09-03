@@ -26,10 +26,10 @@ params [
     ["_position_evac", [], [[]]]
 ];
 
-private _civilians = (units civilian) inAreaArray [_position, 200, 200];
+private _civilians = (units civilian) inAreaArray [_position, 700, 700];
 
 if (_position_evac isEqualTo []) then {
-    private _safe = (nearestTerrainObjects [_position, ["CHURCH", "CHAPEL"], 400]);
+    private _safe = (nearestTerrainObjects [_position, ["CHURCH", "CHAPEL", "HOSPITAL", "HOUSE"], 600]);
     if (_safe isEqualTo []) then {
         _position_evac = [_position, 0, 500, 30, 0, 60 * (pi / 180), 0] call BIS_fnc_findSafePos;
         _position_evac set [2, 0];

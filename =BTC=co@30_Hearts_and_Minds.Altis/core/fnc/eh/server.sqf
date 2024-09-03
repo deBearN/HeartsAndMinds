@@ -73,17 +73,15 @@ addMissionEventHandler ["HandleDisconnect", {
     false
 }];
 ["ace_unconscious", btc_slot_fnc_serializeState] call CBA_fnc_addEventHandler;
-["btc_playerConnected", { 
+["btc_playerConnected", {
     params ["_player", "_ids"];
     [_player, _player call btc_slot_fnc_createKey, _ids select 4] call btc_slot_fnc_deserializeState_s;
 }] call CBA_fnc_addEventHandler;
-if (btc_p_auto_db) then {
-    addMissionEventHandler ["HandleDisconnect", {
-        if ((allPlayers - entities "HeadlessClient_F") isEqualTo []) then {
-            [] call btc_db_fnc_save;
-        };
-    }];
-};
+addMissionEventHandler ["HandleDisconnect", {
+    if ((allPlayers - entities "HeadlessClient_F") isEqualTo []) then {
+        [] call btc_db_fnc_save;
+    };
+}];
 if (btc_p_chem) then {
     ["ace_cargoLoaded", btc_chem_fnc_propagate] call CBA_fnc_addEventHandler;
     ["AllVehicles", "GetIn", {[_this select 0, _this select 2] call btc_chem_fnc_propagate}] call CBA_fnc_addClassEventHandler;
@@ -116,7 +114,7 @@ if (btc_p_set_skill) then {
         [_this select 0, "HandleDamage", btc_patrol_fnc_disabled] call CBA_fnc_addBISEventHandler;
     }, false] call CBA_fnc_addClassEventHandler;
 } forEach btc_civ_type_veh;
-["ace_tagCreated", btc_tag_fnc_eh] call CBA_fnc_addEventHandler; 
+["ace_tagCreated", btc_tag_fnc_eh] call CBA_fnc_addEventHandler;
 
 if (btc_p_respawn_ticketsAtStart >= 0) then {
     ["ace_placedInBodyBag", btc_body_fnc_setBodyBag] call CBA_fnc_addEventHandler;
@@ -155,4 +153,4 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
     params ["_explosive", "_dir", "_pitch", "_unit"];
     _explosive setVariable ["btc_side", side group _unit];
     btc_explosives pushBack _this;
-}] call CBA_fnc_addEventHandler; 
+}] call CBA_fnc_addEventHandler;
