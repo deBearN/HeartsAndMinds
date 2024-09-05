@@ -36,7 +36,7 @@ _city setVariable [
         _grave setDir _dir;
         _grave setVectorUp surfaceNormal _posASL;
 
-        private _flowers = createSimpleObject [selectRandom btc_type_flowers, _posASL];
+        private _flowers = createSimpleObject [selectRandom btc_type_flowersBig, _posASL];
         _flowers setDir _dir;
 
         [_flowers, _grave]
