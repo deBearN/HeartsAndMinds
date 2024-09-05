@@ -24,7 +24,7 @@ Author:
 params ["_patient", "_restingPlace"];
 
 if (
-    isNil {_city getVariable "btc_rep_playerKiller"}
+    isNil {_patient getVariable "btc_rep_playerKiller"}
 ) exitWith {};
 
 private _church = nearestTerrainObjects [_patient, ["CHURCH", "CHAPEL"], 50];
