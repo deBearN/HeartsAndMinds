@@ -27,11 +27,11 @@ params [
 ];
 
 _city setVariable [
-    "btc_civ_graves", 
+    "btc_civ_graves",
     _graves apply {
         _x params ["_posASL", "_dir", "_graveType"];
 
-        _grave = createVehicle [_graveType, [0, 0, 0], [], 0, "NONE"];
+        private _grave = createVehicle [_graveType, [0, 0, 0], [], 0, "NONE"];
         _grave setPosASL _posASL;
         _grave setDir _dir;
         _grave setVectorUp surfaceNormal _posASL;

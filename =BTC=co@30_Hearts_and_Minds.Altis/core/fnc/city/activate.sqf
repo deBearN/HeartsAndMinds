@@ -304,7 +304,7 @@ if (_civKilled isNotEqualTo []) then {
     [[_city, _civKilled], btc_civ_fnc_createFlower] call btc_delay_fnc_exec;
 };
 
-private _grave = _city getVariable ["btc_rep_grave", []];
+private _grave = _city getVariable ["btc_rep_graves", []];
 if (_grave isNotEqualTo []) then {
     [[_city, _grave], btc_civ_fnc_createGrave] call btc_delay_fnc_exec;
 };

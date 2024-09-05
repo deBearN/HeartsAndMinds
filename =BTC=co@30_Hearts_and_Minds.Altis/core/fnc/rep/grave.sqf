@@ -36,7 +36,7 @@ private _city = [_church, values btc_city_all] call btc_fnc_find_closecity;
 private _cachingRadius = _city getVariable "cachingRadius";
 
 if (_city distance _church < _cachingRadius) then {
-    private _graveList = _city getVariable ["btc_rep_grave", []];
+    private _graveList = _city getVariable ["btc_rep_graves", []];
     _graveList pushBack [getPosASL _restingPlace, getDir _restingPlace, typeOf _restingPlace];
-    _city setVariable ["btc_rep_grave", _graveList];
+    _city setVariable ["btc_rep_graves", _graveList];
 };
