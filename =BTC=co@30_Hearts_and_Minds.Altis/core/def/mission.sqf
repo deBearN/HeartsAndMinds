@@ -346,7 +346,6 @@ if (isServer) then {
 
     //Flowers
     btc_type_flowers = _allClassSorted select {_x isKindOf "FlowerBouquet_base_F"};
-    btc_type_flowersBig = _allClassSorted select {_x isKindOf "MemorialWreath_01_base_F"};
 
     //IED
     private _ieds = ["Land_GarbageContainer_closed_F", "Land_GarbageContainer_open_F", "Land_Portable_generator_F", "Land_WoodenBox_F", "Land_BarrelTrash_grey_F", "Land_Sacks_heap_F", "Land_Wreck_Skodovka_F", "Land_WheelieBin_01_F", "Land_GarbageBin_03_F"] + btc_type_pallet + btc_type_barrel + (_allClassSorted select {

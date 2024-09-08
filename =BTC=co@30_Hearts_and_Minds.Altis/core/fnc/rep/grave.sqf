@@ -40,4 +40,8 @@ if (_city distance _church < _cachingRadius) then {
     private _graveList = _city getVariable ["btc_rep_graves", []];
     _graveList pushBack [getPosASL _restingPlace, getDir _restingPlace, typeOf _restingPlace];
     _city setVariable ["btc_rep_graves", _graveList];
+
+    private _graveList = _city getVariable ["btc_civ_graves", []];
+    _graveList pushBack _restingPlace;
+    _city setVariable ["btc_civ_graves", _graveList];
 };
