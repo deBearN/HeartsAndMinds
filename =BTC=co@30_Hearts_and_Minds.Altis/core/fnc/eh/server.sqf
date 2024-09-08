@@ -132,8 +132,8 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
             _unit in btc_body_deadPlayers
         ) then {
             deleteMarker (_unit getVariable ["btc_body_deadMarker", ""]);
-            private _deadUnits  = [[[_unit]] call btc_body_fnc_get] call btc_body_fnc_create;
-            private _deadUnit = _deadUnits select 0;
+            private _deadUnits = [[[_unit]] call btc_body_fnc_get] call btc_body_fnc_create;
+            _deadUnit = _deadUnits select 0;
             btc_body_deadPlayers pushBack _deadUnit;
         };
     }];
