@@ -22,7 +22,7 @@ Author:
 ---------------------------------------------------------------------------- */
 
 params ["_unit", "_causeOfDeath", "_killer", "_instigator"];
-[format ["%1", _this] , __FILE__, [btc_debug, btc_debug_log, true]] call btc_debug_fnc_message;
+
 if (
     (side group _unit isNotEqualTo civilian) &&
     {!isAgent teamMember _unit}
