@@ -40,7 +40,7 @@ _city setVariable [
         for "_i" from 0 to random 3 do {
             _flowers pushBack createSimpleObject [
                 selectRandom btc_type_flowers,
-                [[_posASL vectorAdd [0, 0, 0.2], 0.2, 0.8, 360, true]] call CBA_fnc_randPosArea
+                [[_posASL vectorAdd [0, 0, 0.2], 0.2, 0.8, _dir, true]] call CBA_fnc_randPosArea
             ];
             (_flowers select _i) setDir random 360;
         };
