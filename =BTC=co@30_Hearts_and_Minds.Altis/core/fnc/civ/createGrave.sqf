@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [btc_city_all get 0, [[getPosASL player, getDir player, "Land_Grave_dirt_F"]]] call btc_civ_fnc_createGrave;
+        [btc_city_all get 1, [[getPosASL player, getDir player, "Land_Grave_dirt_F"]]] call btc_civ_fnc_createGrave;
     (end)
 
 Author:
@@ -37,7 +37,7 @@ _city setVariable [
         _grave setVectorUp surfaceNormal _posASL;
 
         _flowers = [];
-        for "_i" from 0 to random 3 do {
+        for "_i" from 0 to (1 + round random 2) do {
             _flowers pushBack createSimpleObject [
                 selectRandom btc_type_flowers,
                 [[_posASL vectorAdd [0, 0, 0.2], 0.2, 0.8, _dir, true]] call CBA_fnc_randPosArea
