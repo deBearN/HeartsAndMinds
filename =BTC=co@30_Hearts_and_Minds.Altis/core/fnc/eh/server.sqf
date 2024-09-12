@@ -155,6 +155,18 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
     params ["_explosive", "_dir", "_pitch", "_unit"];
     _explosive setVariable ["btc_side", side group _unit];
     btc_explosives pushBack _this;
-}] call CBA_fnc_addEventHandler; 
+}] call CBA_fnc_addEventHandler;
 
-["ace_placedInBodyBag", btc_rep_fnc_grave] call CBA_fnc_addEventHandler;
+["ace_placedInBodyBag", {
+    params ["_patient", "_bodyBag", "_isGrave"];
+    if (
+        isNil {_patient getVariable "btc_rep_playerKiller"}
+    ) exitWith {};
+
+    private _killer = _patient getVariable "btc_rep_playerKiller";
+    if (_isGrave) then {
+        [btc_rep_fnc_grave, [_bodyBag, _killer], 0.2] call CBA_fnc_waitAndExecute;
+    } else {
+        _bodyBag setVariable ["btc_rep_playerKiller", _killer];
+    };
+}] call CBA_fnc_addEventHandler;
