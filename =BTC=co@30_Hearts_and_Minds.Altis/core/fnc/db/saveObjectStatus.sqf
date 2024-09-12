@@ -43,7 +43,7 @@ private _cargo = (_object getVariable ["ace_cargo_loaded", []]) apply {
             magazinesAllTurrets _x,
             _x getVariable ["ace_cargo_customName", ""],
             [_x] call btc_veh_fnc_propertiesGet,
-            _x getVariable ["btc_rep_playerKiller", nil]
+            _x getVariable ["btc_rep_playerKiller", ""]
         ]
     };    
 };
