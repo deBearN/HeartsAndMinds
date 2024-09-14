@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [btc_city_all get 1, [[getPosASL player, getDir player, "Land_Grave_dirt_F"]]] call btc_civ_fnc_createGrave;
+        [btc_city_all get 1, [[getPosASL player, getDir player, "ACE_Grave"]]] call btc_civ_fnc_createGrave;
     (end)
 
 Author:

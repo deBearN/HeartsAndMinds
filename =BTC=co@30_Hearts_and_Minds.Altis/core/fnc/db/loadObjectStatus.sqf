@@ -38,7 +38,7 @@ _object_data params [
     ["_customName", "", [""]],
     ["_tagTexture", "", [""]],
     ["_properties", [], [[]]],
-    ["_playerKiller", "", [objNull]]
+    ["_playerKiller", "", [""]]
 ];
 
 private _obj = createVehicle [_type, ASLToATL _pos, [], 0, "CAN_COLLIDE"];
