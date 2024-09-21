@@ -31,18 +31,31 @@ params [
 private _pos = getPos _city;
 private _array = _city getVariable ["ieds", []];
 
+private _cities = (values btc_city_all) - [_city];
+_cities = _cities inAreaArray [_city, _area, _area];
+private _blackListCities = _cities select {
+    _x getVariable ["ieds", []] isNotEqualTo []
+};
+private _blackListPos = _blackListCities apply {(_x getVariable ["ieds", []]) select 0};
+_blackListPos = flatten _blackListPos;
+_blackListPos = _blackListPos inAreaArray [_city, _area, _area];
+
 {
     for "_i" from 1 to _n do {
         private _sel_pos = [_pos, _area] call btc_fnc_randomize_pos;
         private _dir = random 360;
 
         private _roads = _sel_pos nearRoads 50;
-        if (_roads isEqualTo []) then {
-            _sel_pos = [_sel_pos, 0, 100, 1, false] call btc_fnc_findsafepos;
-        } else {
+        if (_roads isNotEqualTo []) then {
             private _arr = (selectRandom _roads) call btc_ied_fnc_randomRoadPos;
             _sel_pos = _arr select 0;
             _dir = _arr select 1;
+        };
+        if (
+            _roads isEqualTo [] ||
+            {_blackListPos inAreaArray [_sel_pos, 1, 1] isNotEqualTo []}
+        ) then {
+            _sel_pos = [_sel_pos, 0, 100, 1, false] call btc_fnc_findsafepos;
         };
 
         _array pushBack [_sel_pos, selectRandom btc_model_ieds, _dir, _x];
