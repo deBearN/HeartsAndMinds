@@ -40,14 +40,19 @@ private _blackListPos = _blackListCities apply {(_x getVariable ["ieds", []]) se
 _blackListPos = flatten _blackListPos;
 _blackListPos = _blackListPos inAreaArray [_city, _area, _area];
 
+private _blackListRoads = [];
 {
     for "_i" from 1 to _n do {
         private _sel_pos = [_pos, _area] call btc_fnc_randomize_pos;
         private _dir = random 360;
 
         private _roads = _sel_pos nearRoads 50;
+        _roads = _roads - _blackListRoads;
+        [format ["_roads %1", count _roads], __FILE__, [true, true]] call btc_debug_fnc_message;
         if (_roads isNotEqualTo []) then {
-            private _arr = (selectRandom _roads) call btc_ied_fnc_randomRoadPos;
+            private _road = selectRandom _roads;
+            _blackListRoads pushBack _road;
+            private _arr = _road call btc_ied_fnc_randomRoadPos;
             _sel_pos = _arr select 0;
             _dir = _arr select 1;
         };
@@ -55,6 +60,7 @@ _blackListPos = _blackListPos inAreaArray [_city, _area, _area];
             _roads isEqualTo [] ||
             {_blackListPos inAreaArray [_sel_pos, 1, 1] isNotEqualTo []}
         ) then {
+            [format ["%1", _blackListPos inAreaArray [_sel_pos, 1, 1] isNotEqualTo []], __FILE__, [true, true]] call btc_debug_fnc_message;
             _sel_pos = [_sel_pos, 0, 100, 1, false] call btc_fnc_findsafepos;
         };
 
