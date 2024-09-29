@@ -48,7 +48,6 @@ private _blackListRoads = [];
 
         private _roads = _sel_pos nearRoads 50;
         _roads = _roads - _blackListRoads;
-        [format ["_roads %1", count _roads], __FILE__, [true, true]] call btc_debug_fnc_message;
         if (_roads isNotEqualTo []) then {
             private _road = selectRandom _roads;
             _blackListRoads pushBack _road;
