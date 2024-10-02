@@ -52,7 +52,6 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
     _city setVariable ["btc_rep_civKilled", _civKilled];
     _city setVariable ["btc_rep_graves", _graves];
 
-
     if (btc_debug) then {
         private _marker = _city getVariable ["marker", ""];
         if (_city getVariable ["occupied", false]) then {

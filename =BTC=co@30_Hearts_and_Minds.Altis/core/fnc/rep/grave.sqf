@@ -7,7 +7,7 @@ Description:
 
 Parameters:
     _restingPlace - Resting Place [Object]
-    _killer - Killer [Object]
+    _medic - Medic [Object]
 
 Returns:
 
@@ -21,13 +21,13 @@ Author:
 
 ---------------------------------------------------------------------------- */
 
-params ["_restingPlace", "_killer"];
+params ["_restingPlace", "_medic"];
 
 private _church = nearestTerrainObjects [_restingPlace, ["CHURCH", "CHAPEL"], 50];
 if (_church isEqualTo []) exitWith {};
 _church = _church select 0;
 
-[btc_rep_bonus_grave, _killer call BIS_fnc_getUnitByUID] call btc_rep_fnc_change;
+[btc_rep_bonus_grave, _medic] call btc_rep_fnc_change;
 
 private _city = [_church, values btc_city_all, false] call btc_fnc_find_closecity;
 private _cachingRadius = _city getVariable "cachingRadius";

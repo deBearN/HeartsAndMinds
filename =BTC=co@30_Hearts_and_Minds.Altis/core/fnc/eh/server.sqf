@@ -158,14 +158,14 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
 }] call CBA_fnc_addEventHandler;
 
 ["ace_placedInBodyBag", {
-    params ["_patient", "_bodyBag", "_isGrave"];
+    params ["_patient", "_bodyBag", "_isGrave", "_medic"];
     if (
         isNil {_patient getVariable "btc_rep_playerKiller"}
     ) exitWith {};
 
     private _killer = _patient getVariable "btc_rep_playerKiller";
     if (_isGrave) then {
-        [btc_rep_fnc_grave, [_bodyBag, _killer], 0.2] call CBA_fnc_waitAndExecute;
+        [btc_rep_fnc_grave, [_bodyBag, _medic], 0.2] call CBA_fnc_waitAndExecute;
     } else {
         _bodyBag setVariable ["btc_rep_playerKiller", _killer];
     };
