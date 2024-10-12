@@ -79,7 +79,8 @@ addMissionEventHandler ["HandleDisconnect", {
 }] call CBA_fnc_addEventHandler;
 if (btc_p_auto_db) then {
     addMissionEventHandler ["HandleDisconnect", {
-        if ((allPlayers - entities "HeadlessClient_F") isEqualTo []) then {
+        params ["_player"];
+        if ((allPlayers - entities "HeadlessClient_F" - [_player]) isEqualTo []) then {
             [] call btc_db_fnc_save;
         };
     }];
