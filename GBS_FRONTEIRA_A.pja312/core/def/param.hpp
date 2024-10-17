@@ -165,13 +165,13 @@
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_FAC_CTYPE"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28};
         texts[]={"0 - Bohemia Interactive: Civilians (Side: CIV)","1 - Bohemia Interactive: Other (Side: CIV)","2 - CFP Drew: Civilians (Afghanistan) (Side: CIV)","3 - CFP Drew: Civilians (African Christian) (Side: CIV)","4 - CFP Drew: Civilians (African Islamic) (Side: CIV)","5 - CFP Drew: Civilians (Asian) (Side: CIV)","6 - CFP Drew: Civilians (Chernarus Winter) (Side: CIV)","7 - CFP Drew: Civilians (Malden) (Side: CIV)","8 - CFP Drew: Civilians (Middle Eastern) (Side: CIV)","9 - CSLA ÄŒSLA Studio: Civilians [ÄŒSLA] (Side: CIV)","10 - CUP_Vehicles $CUP_AUTHOR_STRING: Civilians (Chernarus) (Side: CIV)","11 - CUP_Vehicles $CUP_AUTHOR_STRING: Civilians (Sahrani) (Side: CIV)","12 - CUP_Vehicles $CUP_AUTHOR_STRING: Civilians (Takistan) (Side: CIV)","13 - CUP_Vehicles Community Upgrade Project: Civilians (Russian) (Side: CIV)","14 - cwr3_dlc CWR III Modification: Civilians (CWR III) (Side: CIV)","15 - gm Global Mobilization: East Germany (Civilians) (Side: CIV)","16 - gm Global Mobilization: West Germany (Civilians) (Side: CIV)","17 - LIB Reyhard & Joarius: 40s Civilians (Side: CIV)","18 - OPTRE A2S: Civilians (UEG) (Side: CIV)","19 - ORANGE Bohemia Interactive: IDAP (Side: CIV)","20 - RDS_CIV_PACK RDS (BIS A2 Port): Polish (Side: CIV)","21 - RDS_CIV_PACK RDS (BIS A2 Port): Russians (Side: CIV)","22 - SPE Heavy Ordnance Works: [SPE] 40s Civilians (Side: CIV)","23 - UK3CB_Factions www.3commandobrigade.com: 3CB African Desert Civilians (Side: CIV)","24 - UK3CB_Factions www.3commandobrigade.com: 3CB Chernarus Civilians (Side: CIV)","25 - UK3CB_Factions www.3commandobrigade.com: 3CB Middle East Civilians (Side: CIV)","26 - UK3CB_Factions www.3commandobrigade.com: 3CB Takistan Civilians (Side: CIV)","27 - UNSUNG Bohemia Interactive: Vietnamese (UNSUNG) (Side: CIV)","28 - VN Savage Game Design: Vietnamese (Side: CIV)"};
-        default = 2;
+        default = 0;
     };
     class btc_p_civ_veh { // Civil vehicle type:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_FAC_CTYPEVEH"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28};
         texts[]={"0 - Bohemia Interactive: Civilians (Side: CIV)","1 - Bohemia Interactive: Other (Side: CIV)","2 - CFP Drew: Civilians (Afghanistan) (Side: CIV)","3 - CFP Drew: Civilians (African Christian) (Side: CIV)","4 - CFP Drew: Civilians (African Islamic) (Side: CIV)","5 - CFP Drew: Civilians (Asian) (Side: CIV)","6 - CFP Drew: Civilians (Chernarus Winter) (Side: CIV)","7 - CFP Drew: Civilians (Malden) (Side: CIV)","8 - CFP Drew: Civilians (Middle Eastern) (Side: CIV)","9 - CSLA ÄŒSLA Studio: Civilians [ÄŒSLA] (Side: CIV)","10 - CUP_Vehicles $CUP_AUTHOR_STRING: Civilians (Chernarus) (Side: CIV)","11 - CUP_Vehicles $CUP_AUTHOR_STRING: Civilians (Sahrani) (Side: CIV)","12 - CUP_Vehicles $CUP_AUTHOR_STRING: Civilians (Takistan) (Side: CIV)","13 - CUP_Vehicles Community Upgrade Project: Civilians (Russian) (Side: CIV)","14 - cwr3_dlc CWR III Modification: Civilians (CWR III) (Side: CIV)","15 - gm Global Mobilization: East Germany (Civilians) (Side: CIV)","16 - gm Global Mobilization: West Germany (Civilians) (Side: CIV)","17 - LIB Reyhard & Joarius: 40s Civilians (Side: CIV)","18 - OPTRE A2S: Civilians (UEG) (Side: CIV)","19 - ORANGE Bohemia Interactive: IDAP (Side: CIV)","20 - RDS_CIV_PACK RDS (BIS A2 Port): Polish (Side: CIV)","21 - RDS_CIV_PACK RDS (BIS A2 Port): Russians (Side: CIV)","22 - SPE Heavy Ordnance Works: [SPE] 40s Civilians (Side: CIV)","23 - UK3CB_Factions www.3commandobrigade.com: 3CB African Desert Civilians (Side: CIV)","24 - UK3CB_Factions www.3commandobrigade.com: 3CB Chernarus Civilians (Side: CIV)","25 - UK3CB_Factions www.3commandobrigade.com: 3CB Middle East Civilians (Side: CIV)","26 - UK3CB_Factions www.3commandobrigade.com: 3CB Takistan Civilians (Side: CIV)","27 - UNSUNG Bohemia Interactive: Vietnamese (UNSUNG) (Side: CIV)","28 - VN Savage Game Design: Vietnamese (Side: CIV)"};
-        default = 2;
+        default = 0;
     };
     class btc_p_spawn_title { // << Spawn options >>
         title = $STR_BTC_HAM_PARAM_SPAWN_TITLE;
@@ -465,7 +465,7 @@
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_SPAWNRAD"]);
         values[]={0,1,2,3,4,5,6,7,8,10,15,20};
         texts[]={"0 m","100 m","200 m",$STR_BTC_HAM_PARAM_OTHER_SPAWNRAD_DEF,"400 m","500 m (Takistan)","600 m","700 m","800 m","1000","1500", "2000"}; // texts[]={"0 m","100 m","200 m","300 m","400 m","500 m (Takistan)","600 m","700 m","800 m"};
-        default = 20;
+        default = 3;
     };
     class btc_p_trigger { // Disable city activation when a plane or helicopter (>190Km/h) is flying above:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_DISABLESPAWN"]);
