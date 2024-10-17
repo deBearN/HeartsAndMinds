@@ -170,7 +170,7 @@ if (isServer) then {
     btc_ied_suic_spawned = - btc_ied_suic_time;
     btc_ied_offset = [0, -0.03, -0.07] select _p_ied_spot;
     btc_ied_list = [];
-    btc_ied_range = 3;
+    btc_ied_range = 8;
     btc_ied_power = ["Bo_GBU12_LGB_MI10", "12Rnd_230mm_rockets"] select btc_p_ied_power;
 
     //FOB
