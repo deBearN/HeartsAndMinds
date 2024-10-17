@@ -68,6 +68,10 @@ for "_id" from 0 to (count _locations - 1) do {
 		if ((getMarkerPos "Safe_2") inArea [_position, 50, 50, 0, false]) exitWith {};
 		if ((getMarkerPos "Safe_3") inArea [_position, 50, 50, 0, false]) exitWith {};
 		if ((getMarkerPos "Safe_4") inArea [_position, 50, 50, 0, false]) exitWith {};
+		if ((getMarkerPos "Safe_5") inArea [_position, 50, 50, 0, false]) exitWith {};
+		if ((getMarkerPos "Safe_6") inArea [_position, 50, 50, 0, false]) exitWith {};
+		if ((getMarkerPos "Safe_7") inArea [_position, 50, 50, 0, false]) exitWith {};
+        if ((getMarkerPos "Safe_8") inArea [_position, 50, 50, 0, false]) exitWith {};
 
         [_position, _type, _name, _cachingRadius, false, _id] call btc_city_fnc_create;
     };
