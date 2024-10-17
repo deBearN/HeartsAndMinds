@@ -108,7 +108,7 @@ btc_p_debug = "btc_p_debug" call BIS_fnc_getParamValue;
 
 switch (btc_p_debug) do {
     case 0 : {
-        btc_debug_log = false;
+        btc_debug_log = true;
         btc_debug = false;
     };
     case 1 : {
@@ -156,7 +156,7 @@ if (isServer) then {
     //Hideout
     btc_hideout_cityID = []; // List of city ID visible in debug mode for custom hideout location
     btc_hideouts = []; publicVariable "btc_hideouts";
-    btc_hideouts_radius = 800;
+    btc_hideouts_radius = 1000;
     if (btc_hideout_n isEqualTo 99) then {
         btc_hideout_n = round random 10;
     };
@@ -170,8 +170,8 @@ if (isServer) then {
     btc_ied_suic_spawned = - btc_ied_suic_time;
     btc_ied_offset = [0, -0.03, -0.07] select _p_ied_spot;
     btc_ied_list = [];
-    btc_ied_range = 10;
-    btc_ied_power = ["Bo_GBU12_LGB_MI10", "R_MRAAWS_HE_F"] select btc_p_ied_power;
+    btc_ied_range = 3;
+    btc_ied_power = ["Bo_GBU12_LGB_MI10", "12Rnd_230mm_rockets"] select btc_p_ied_power;
 
     //FOB
     btc_fobs = [[], [], []];
@@ -408,9 +408,9 @@ btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
 btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
 
 //FOB
-btc_fob_mat = "Land_Cargo20_blue_F";
+btc_fob_mat = "Misc_Cargo1B_military";
 btc_fob_structure = "Land_Cargo_HQ_V1_F";
-btc_fob_flag = "Flag_NATO_F";
+btc_fob_flag = "Brazil_Flag";
 btc_fob_id = 0;
 btc_fob_minDistance = 1500;
 
@@ -441,7 +441,7 @@ private _mapsIntel = switch (worldName) do {
 btc_info_intels append _mapsIntel;
 
 //Supplies
-btc_supplies_cargo = "Land_Cargo20_IDAP_F";
+btc_supplies_cargo = "Land_PaperBox_01_small_stacked_F";
 btc_supplies_mat = [
     _allClassSorted select {_x isKindOf "Land_FoodSack_01_cargo_base_F"},
     _allClassSorted select {_x isKindOf "Land_WaterBottle_01_stack_F"}
@@ -469,9 +469,11 @@ btc_construction_array =
 [
     [
         "Fortifications",
+		"Fortifications [Boxloader]",
         "Static",
         "Ammobox",
         "Containers",
+		"Containers [Boxloader]",
         "Supplies",
         "FOB",
         "Decontamination",
@@ -502,6 +504,37 @@ btc_construction_array =
             "Land_PortableLight_double_F",
             "Land_Pod_Heli_Transport_04_medevac_black_F"
         ],
+		[
+            //"Fortifications Boxloader"
+            "Land_Boxloader_Hesco_BigFlat",
+			"Land_Boxloader_Fort_Roof_Flat",
+			"Land_Boxloader_Camonet_Green_Flat",
+			"Land_Boxloader_Camonet_Tan_Flat",
+			"Land_Boxloader_Fort_Wire_Flat",
+			"Land_Boxloader_Fort_Helipad_Tarp_Flat",
+			"Land_Boxloader_Hesco_Flat",
+			"Land_Boxloader_LME_Flat_Green",
+			"Land_Boxloader_LME_Flat_Tan",
+			"Land_Boxloader_Hesco_SmallFlat",
+			"Land_Boxloader_Fort_Plat_Flat",
+			"Land_Boxloader_Fort_Wall_Flat",
+			"land_boxloader_temper_window_flat_green",
+			"land_boxloader_Temper_window_flat_tan",
+			"Land_Boxloader_Temper_Vestibule_Flat_Green",
+			"Land_Boxloader_Temper_Vestibule_Flat_Tan",
+			"Land_Boxloader_Temper_Divider_Flat",
+			"Land_Boxloader_Temper_Medsign_Flat",
+			"Land_Boxloader_Temper_Lights_Flat",
+			"Land_Boxloader_Temper_End_Flat_Green",
+			"Land_Boxloader_Temper_End_Flat_Tan",
+			"Land_Boxloader_Temper_Door_Flat_Green",
+			"land_boxloader_Temper_door_flat_tan",
+			"Land_Boxloader_Sandbag_Pile2",
+			"Land_Boxloader_Sandbag_Pile2_tall",
+			"Land_Boxloader_Fort_iso_Green",
+			"Land_Boxloader_Fort_iso_Brown",
+			"Land_Boxloader_Fort_iso_Aid"
+        ],
         [
             //"Static"
         ] + (_allClassSorted select {(
@@ -526,6 +559,17 @@ btc_construction_array =
             //"Containers"
 
         ] + btc_containers_mat,
+		[
+			//"Containers Boxloader"
+			"Land_Boxloader_iso_20ft_green",
+			"Land_Boxloader_iso_20ft_black",
+			"Land_Boxloader_iso_20ft_sand",
+			"Land_Boxloader_iso_20ft_aid",
+			"Land_Boxloader_iso_tricon_black",
+			"Land_Boxloader_iso_tricon_green",
+			"Land_Boxloader_iso_tricon_aid",
+			"Land_Boxloader_iso_tricon_sand"
+		],
         [
             //"Supplies"
             btc_supplies_cargo
@@ -581,7 +625,7 @@ btc_log_fnc_get_nottowable = {
         };
         case (_tower isKindOf "Car") : {
             ["Truck", "Truck_F", "Tank", "Plane", "Helicopter"]; //The tower is a car so it can't tow: truck, tank, plane and helicopter
-        }; 
+        };
         default {
             ["Car", "Truck", "Truck_F", "Tank", "Plane", "Helicopter", "Ship"];
         };
@@ -632,7 +676,7 @@ btc_lift_HUD_y  = 0.848;
 btc_hq = objNull;
 // Get all faction from mod there are currently running
 //copyToClipboard str (["EN"] call btc_fnc_get_class);
-private _allfaction = ["CSLA","AFMC","FIA","US85","AWAKENED","AFR_ARMY","AOA_CIV_OPERATIONS","ARA_ARMY","ARL_ARMY","BLU_F","BLU_EAF_F","IND_F","BLU_CTRG_F","OPF_G_F","IND_G_F","BLU_G_F","IND_C_F","IND_E_F","IND_L_F","CEC_ARMY","CFP_B_CAF","CFP_O_IQARMY","CFP_B_ILIDF","CFP_B_NAARMY","CFP_O_SDMILITIA","CFP_O_ABUSAYYAF","CFP_B_AFGPOLICE","CFP_O_ALQAEDA","CFP_I_ALNUSRA","CFP_O_ALSHABAAB","CFP_O_BOKOHARAM","CFP_O_CFREBELS","CFP_O_HAMAS","CFP_O_HEZBOLLAH","CFP_B_IQARMY","CFP_B_IQPOLICE","CFP_O_IRARMY","CFP_O_IS","CFP_I_IS","CFP_B_KEARMY","CFP_B_MLARMY","CFP_B_PESH","CFP_O_SOREBEL","CFP_I_SSARMY","CFP_O_SSREBELS","CFP_I_SDREBELS","CFP_I_SDREBELSRF","CFP_O_SDARMY","CFP_O_SYARMY","CFP_O_TBAN","CFP_I_TUAREG","CFP_B_UGARMY","CFP_B_USRANGERS_WDL","CFP_B_USSEALS_DES","CFP_B_USSEALS_WDL","CFP_B_YPG","CFP_O_ANSARALLAH","CFP_B_CZARMY_WDL","CFP_I_WESTULTRA","COL_FAC","COL","COL_RHS_FACTION_EJC","COL_FFAA_FUERZAS_MILITARES_DE_COLOMBIA","CUP_B_AFU","CUP_B_CZ","CUP_B_GB","CUP_B_CDF","CUP_O_CHDKZ","CUP_STATIC_SHIPS","CUP_I_NAPA","CUP_I_RACS","CUP_B_RNZN","CUP_O_RU","CUP_O_SLA","CUP_O_TK","CUP_O_TK_MILITIA","CUP_I_UN","CUP_B_US_ARMY","CUP_B_USMC","CUP_B_GER","CUP_B_HIL","CUP_I_PMC_ION","CUP_O_RUS_M","CFP_B_GBARMY_WDL","CFP_B_DEARMY_WDL","CUP_I_TK_GUE","CFP_B_USMC_DES","CFP_B_CDF_SNW","CFP_O_WAGNER","CFP_I_WAGNER","CFP_O_WAGNER_WIN","CFP_I_WAGNER_WIN","CFP_O_WAGNER_WDL","CFP_I_WAGNER_WDL","CFP_B_USARMY_1991_DES","CFP_B_USARMY_1991_WDL","CFP_B_USARMY_2003_DES","CFP_B_USARMY_2003_WDL","CFP_O_RUMVD","CFP_B_USCIA","CFP_B_USARMY_WDL","CFP_B_AFARMY","CFP_O_CHDKZ_SNW","CFP_O_RUARMY_DES","CWR3_FACTION_FIA","CWR3_FACTION_REBELS_EAST","CWR3_FACTION_REBELS_WEST","CWR3_FACTION_RUS","CWR3_FACTION_USA","CWR3_FACTION_USA_DES","O_FARCS","OPF_R_F","IND_E_ARD_F","BLU_A_TNA_F","BLU_A_F","BLU_A_WDL_F","OPF_R_ARD_F","BLU_GEN_F","OPF_V_F","BLU_CTRG_TNA_F","BLU_T_F","OPF_V_TNA_F","CFP_O_NKARMY","OPF_CD_F","FAP_ARMY","FOW_HEER","FOW_IJA_NAS","FOW_UK_FAA","FOW_USA_NAVY","FOW_WAFFENSS","FOW_AUS","FOW_LUFTWAFFE","FOW_HI","FOW_UK","FOW_USA_P","FOW_IJA","FOW_USA","FOW_USMC","GAL_ARMY","GANGBLUE_ARMY","GANGRED_ARMY","GM_FC_DK","GM_FC_GC_BGS","GM_FC_GC","GM_FC_PL","GM_FC_XX","GM_FC_GE_BGS","GM_FC_GE","O_TALIBAN","IBR_ZETABORN_FACTION","IBR_ROBOTFAC","IND_RAVEN_F","LIB_RKKA_W","LIB_WEHRMACHT_W","LIB_ARR","LIB_MKHL","LIB_RBAF","LIB_ACI","LIB_GUER","LIB_RAAF","LIB_RKKA","LIB_WEHRMACHT","LIB_US_101AB","LIB_US_82AB","LIB_UK_AB_W","LIB_UK_ARMY_W","LIB_US_ARMY_W","LIB_FSJ","LIB_UK_AB","LIB_UK_ARMY","LIB_UK_DR","LIB_US_ARMY","LIB_DAK","LIB_NKVD","LIB_US_RANGERS","LIB_NAC","LIB_FFI","BLU_UN_LXWS","BLU_W_F","MOL_ARMY","OPF_A_F","OPF_F","OPF_T_F","OPF_RAVEN_F","OPTRE_DME","OPTRE_INS","OPTRE_CAA","OPTRE_PD","OPTRE_UNSC","OPTRE_FC_COVENANT","I_COGUEEL_WLD","I_COGUEF_WDL","I_COPARA_WDL","O_COGUEPL_WDL","RHS_FACTION_VMF","RHS_FACTION_MSV","RHS_FACTION_RVA","RHS_FACTION_TV","RHS_FACTION_VDV","RHS_FACTION_VPVO","RHS_FACTION_VV","RHS_FACTION_VVS_C","RHS_FACTION_VVS","RHSSAF_FACTION_ARMY","RHSSAF_FACTION_ARMY_OPFOR","RHSSAF_FACTION_AIRFORCE_OPFOR","RHSSAF_FACTION_AIRFORCE","RHSSAF_FACTION_UN","B_COPOLICE_WDL","B_CONAVY_SNW","RHS_FACTION_USARMY_D","RHS_FACTION_USARMY_WD","RHS_FACTION_USN","RHS_FACTION_SOCOM","RHS_FACTION_USAF","RHS_FACTION_USMC_D","RHS_FACTION_USMC_WD","RHSGREF_FACTION_UN","RHSGREF_FACTION_NATIONALIST","RHSGREF_FACTION_TLA","RHSGREF_FACTION_TLA_G","RHSGREF_FACTION_CDF_GROUND","RHSGREF_FACTION_CDF_GROUND_B","SC_ARCHONSFACTION","SC_FACTION_AR","SC_FACTION_AC","SC_MDF","SC_FACTION_SE","SG_STURM","SG_STURMPANZER","SPE_FFI","SPE_FR_ARMY","SPE_MILICE","SPE_STURM","SPE_US_ARMY","SPE_WEHRMACHT","UK3CB_AAF_O","UK3CB_AAF_I","UK3CB_AAF_B","UK3CB_ANA_B","UK3CB_ANP_B","UK3CB_ADA_O","UK3CB_ADA_I","UK3CB_ADA_B","UK3CB_ADR_O","UK3CB_ADR_I","UK3CB_ADR_B","UK3CB_ADG_O","UK3CB_ADG_I","UK3CB_ADG_B","UK3CB_ADC_O","UK3CB_ADC_I","UK3CB_ADC_B","UK3CB_ADE_O","UK3CB_ADE_I","UK3CB_ADM_O","UK3CB_ADM_I","UK3CB_ADM_B","UK3CB_ADP_O","UK3CB_ADP_I","UK3CB_ADP_B","UK3CB_APD_O","UK3CB_APD_I","UK3CB_APD_B","UK3CB_ARD_O","UK3CB_ARD_I","UK3CB_ARD_B","UK3CB_CHD_O","UK3CB_CHD_W_O","UK3CB_CHD_B","UK3CB_CHD_W_B","UK3CB_CHD_I","UK3CB_CHD_W_I","UK3CB_CHC_O","UK3CB_CHC_I","UK3CB_CHC_B","UK3CB_CCM_O","UK3CB_CCM_B","UK3CB_CCM_I","UK3CB_CPD_O","UK3CB_CPD_I","UK3CB_CPD_B","UK3CB_CW_US_B_EARLY","UK3CB_CW_US_B_LATE","UK3CB_CW_SOV_O_EARLY","UK3CB_CW_SOV_O_LATE","UK3CB_CSAT_A_O","UK3CB_CSAT_W_O","UK3CB_CSAT_M_O","UK3CB_CSAT_B_O","UK3CB_CSAT_N_O","UK3CB_CSAT_F_O","UK3CB_CSAT_G_O","UK3CB_CSAT_U_O","UK3CB_CSAT_S_O","UK3CB_FIA_O","UK3CB_FIA_I","UK3CB_FIA_B","UK3CB_GAF_O","UK3CB_GAF_I","UK3CB_GAF_B","UK3CB_ION_O_DESERT","UK3CB_ION_I_DESERT","UK3CB_ION_B_DESERT","UK3CB_ION_O_URBAN","UK3CB_ION_I_URBAN","UK3CB_ION_B_URBAN","UK3CB_ION_O_WINTER","UK3CB_ION_I_WINTER","UK3CB_ION_B_WINTER","UK3CB_ION_O_WOODLAND","UK3CB_ION_I_WOODLAND","UK3CB_ION_B_WOODLAND","UK3CB_KRG_O","UK3CB_KRG_I","UK3CB_KRG_B","UK3CB_KDF_O","UK3CB_KDF_I","UK3CB_KDF_B","UK3CB_LDF_O","UK3CB_LDF_I","UK3CB_LDF_B","UK3CB_LFR_O","UK3CB_LFR_I","UK3CB_LFR_B","UK3CB_LSM_O","UK3CB_LSM_I","UK3CB_LSM_B","UK3CB_LNM_O","UK3CB_LNM_I","UK3CB_LNM_B","UK3CB_MDF_O","UK3CB_MDF_I","UK3CB_MDF_B","UK3CB_MEC_O","UK3CB_MEC_I","UK3CB_MEC_B","UK3CB_MEE_O","UK3CB_MEE_I","UK3CB_MEI_O","UK3CB_MEI_I","UK3CB_MEI_B","UK3CB_NAP_O","UK3CB_NAP_I","UK3CB_NAP_B","UK3CB_NFA_O","UK3CB_NFA_I","UK3CB_NFA_B","UK3CB_NPD_O","UK3CB_NPD_I","UK3CB_NPD_B","UK3CB_TKC_O","UK3CB_TKC_I","UK3CB_TKC_B","UK3CB_TKM_O","UK3CB_TKA_O","UK3CB_TKA_I","UK3CB_TKA_B","UK3CB_TKP_O","UK3CB_TKP_I","UK3CB_TKP_B","UK3CB_TKM_B","UK3CB_TKM_I","UK3CB_UN_I","UK3CB_UN_B","RHSGREF_FACTION_CDF_AIR","RHSGREF_FACTION_CDF_AIR_B","RHSGREF_FACTION_CDF_NG","RHSGREF_FACTION_CDF_NG_B","RHSGREF_FACTION_CHDKZ","RHSGREF_FACTION_CHDKZ_G","RHSGREF_FACTION_HIDF","UNSUNG_G","UNSUNG_AUS","UNSUNG_NZ","UNSUNG_ROK","UNSUNG_W","UNSUNG_EV","UNSUNG_E","I_ARVN","B_AUS","I_CAM","O_CAM","B_MACV","B_NZ","O_PL","O_PAVN","B_ROK","I_LAO","B_CIA","B_MEDT","O_VC","B_COARMY_WDL","OPF_GEN_F","BLU_ION_LXWS","OPF_SFIA_LXWS","OPF_TURA_LXWS","IND_TURA_LXWS","BLU_TURA_LXWS","BLU_NATO_LXWS"]; //All factions
+private _allfaction = ["CFP_O_HEZBOLLAH"]; //All factions
 _p_en = _allfaction select _p_en; //Select faction selected from mission parameter
 _allclasse = [[_p_en], _p_en_AA, _p_en_tank] call btc_mil_fnc_class; //Create classes from factions, you can combine factions like that: [[_p_en , "IND_F"], _p_en_AA, _p_en_tank] call btc_mil_fnc_class;
 
@@ -663,10 +707,57 @@ switch (_p_en) do {
         btc_type_motorized = btc_type_motorized + ["I_Truck_02_transport_F", "I_Truck_02_covered_F"];
         btc_type_motorized_armed = btc_type_motorized_armed + ["I_Heli_light_03_F"];
     };
-    case "IND_C_F" : {
-        btc_type_motorized = btc_type_motorized + ["I_G_Offroad_01_repair_F", "I_G_Offroad_01_F", "I_G_Quadbike_01_F", "I_G_Van_01_fuel_F", "I_Truck_02_transport_F", "I_Truck_02_covered_F"];
-        btc_type_motorized_armed = btc_type_motorized_armed + ["I_Heli_light_03_F", "I_G_Offroad_01_F"];
-        btc_type_units = btc_type_units - ["I_C_Soldier_Camo_F"];
+    case "CFP_O_HEZBOLLAH" : {
+        btc_type_motorized = btc_type_motorized + [
+							"CUP_C_Golf4_black_Civ",
+							"CUP_C_Golf4_crowe_Civ",
+							"C_Hatchback_01_F",
+							"C_Truck_02_fuel_F",
+							"C_Truck_02_covered_F",
+							"CUP_C_Octavia_CIV",
+							"C_Quadbike_01_F",
+							"C_Van_01_transport_F",
+							"C_Van_02_vehicle_F",
+							"CFP_C_AFG_Datsun_Pickup_Covered_01",
+							"CFP_C_AFG_Lada_01",
+							"CFP_C_AFG_Skoda_Octavia_01",
+							"CFP_C_AFG_SUV_01",
+							"CFP_C_AFRCHRISTIAN_Ikarus_01",
+							"CFP_C_AFRCHRISTIAN_Pickup_Old_01",
+							"CFP_C_AFRCHRISTIAN_Land_Rover_01",
+							"CFP_C_AFRCHRISTIAN_UAZ_Open_01",
+							"CFP_C_AFRISLAMIC_Land_Rover_01",
+							"CFP_C_AFRISLAMIC_Skoda_Blue_01",
+							"CFP_O_RUMVD_Ural_Open_01",
+							"CFP_C_AFRISLAMIC_Ural_Blue_01",
+							"CFP_C_ASIA_Praga_V3S_01",
+							"CFP_C_CHERNO_WIN_UAZ_TAN_01",
+							"CUP_C_S1203_CIV_CR",
+							"CUP_C_Lada_White_CIV",
+							"CUP_C_UAZ_Unarmed_TK_CIV",
+							"CUP_C_Bus_City_CIV"
+							];
+        btc_type_motorized_armed = btc_type_motorized_armed + [
+							"CFP_O_IS_Hilux_Armored_01",
+							"CFP_O_IS_Hilux_BMP1_Armored_01",
+							"CFP_O_IS_Hilux_BTR60_Armored_01",
+							"CFP_O_IS_Hilux_DSHKM_Armored_01",
+							"CFP_O_IS_Hilux_Metis_Armored_01",
+							"CFP_O_IS_Hilux_MLRS_Armored_01",
+							"CFP_O_IS_Hilux_SPG_Armored_01",
+							"CFP_O_IS_Hilux_UB_32_Armored_01",
+							"cfp_o_is_LR_M2",
+							"CFP_O_SSREBELS_Pickup_PK_01"] - ["CFP_O_HEZBOLLAH_T55_01", "CFP_O_HEZBOLLAH_T55_flag_01", "CFP_O_HEZBOLLAH_T72_01", "CFP_O_HEZBOLLAH_T72_flag_01"];
+
+        btc_type_units = btc_type_units + [
+							"CUP_O_TK_INS_Guerilla_Medic",
+							"CUP_O_TK_INS_Soldier_AR",
+							"CUP_O_TK_INS_Soldier_AAT",
+							"CUP_O_TK_INS_Soldier_FNFAL",
+							"CUP_O_TK_INS_Bomber",
+							"CUP_O_TK_INS_Soldier_AT",
+							"CUP_O_TK_INS_Soldier_MG",
+							"CUP_O_TK_INS_Sniper"];
     };
 };
 
@@ -678,25 +769,25 @@ btc_spect_range = 1000;
 btc_spect_updateOn = -1;
 
 //Rep
-btc_rep_bonus_cache = 100;
+btc_rep_bonus_cache = 200;
 btc_rep_bonus_civ_hh = 3;
-btc_rep_bonus_disarm = 15;
-btc_rep_bonus_hideout = 200;
-btc_rep_bonus_mil_killed = 0.25;
+btc_rep_bonus_disarm = 30;
+btc_rep_bonus_hideout = 500;
+btc_rep_bonus_mil_killed = 1;
 btc_rep_bonus_IEDCleanUp = 10;
-btc_rep_bonus_removeTag = 3;
-btc_rep_bonus_removeTagLetter = 0.5;
-btc_rep_bonus_foodGive = 0.5;
+btc_rep_bonus_removeTag = 5;
+btc_rep_bonus_removeTagLetter = 2;
+btc_rep_bonus_foodGive = 10;
 
-btc_rep_malus_civ_hd = - 2;
-btc_rep_malus_animal_hd = - 1;
-btc_rep_malus_civ_killed = - 10;
-btc_rep_malus_animal_killed = - 5;
-btc_rep_malus_civ_suppressed = - 4;
-btc_rep_malus_player_respawn = - 10;
+btc_rep_malus_civ_hd = - 4;
+btc_rep_malus_animal_hd = - 2;
+btc_rep_malus_civ_killed = - 50;
+btc_rep_malus_animal_killed = - 25;
+btc_rep_malus_civ_suppressed = - 10;
+btc_rep_malus_player_respawn = - 0.1;
 btc_rep_malus_veh_killed = - 25;
-btc_rep_malus_building_damaged = - 2.5;
-btc_rep_malus_building_destroyed = - 5;
+btc_rep_malus_building_damaged = - 5;
+btc_rep_malus_building_destroyed = - 50;
 btc_rep_malus_foodRemove = - btc_rep_bonus_foodGive;
 btc_rep_malus_breakDoor = - 2;
 btc_rep_malus_wheelChange = - 7;
@@ -707,7 +798,7 @@ btc_rep_level_low = 200;
 btc_rep_level_normal = 500;
 btc_rep_level_high = 750;
 
-btc_rep_food = "ACE_Banana";
+btc_rep_food = "ACE_Humanitarian_Ration";
 
 //Headless
 btc_units_owners = [];
@@ -728,4 +819,4 @@ btc_flag_textures = [
 btc_body_bagTicketPlayer = 1;
 btc_body_prisonerTicket = 1;
 
-btc_startDate = [2035, 6, 24, 12, 15];
+btc_startDate = [2024, 6, 24, 12, 15];
