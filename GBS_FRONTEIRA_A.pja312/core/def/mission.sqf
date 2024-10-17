@@ -779,7 +779,6 @@ switch (_p_en) do {
         btc_type_motorized_armed = btc_type_motorized_armed + 
                             [
 							"CUP_I_SUV_Armored_ION", 
-							"CUP_I_CESSNA_T41_ARMED_ION", 
 							"CUP_B_nM1025_SOV_M2_NATO_T"
 							];
 
@@ -806,10 +805,27 @@ switch (_p_en) do {
 							"CUP_I_PMC_Soldier_TL"
 							];
 											
-		btc_type_crewmen = [
+		btc_type_crewmen = 
+        [
 		"I_C_Pilot_F", 
 		"CUP_I_PMC_Crew"
 		];
+        btc_type_boats = 
+        [
+            "B_G_Boat_Transport_01_F", 
+            "CFP_B_USMC_Zodiac_DES_01", 
+            "I_C_Boat_Transport_02_F", 
+            "braf_voadeira_03", 
+            "braf_voadeira_04", 
+            "braf_voadeira_05", 
+            "braf_voadeira_06", 
+            "C_Boat_Civil_01_F", 
+            "C_Boat_Transport_02_F", 
+            "C_Scooter_Transport_01_F", 
+            "CFP_C_ASIA_Fishing_Boat_01", 
+            "CUP_C_PBX_CIV"
+        ];
+
     };
 };
 
