@@ -29,6 +29,7 @@ class RscTitles {
 
 class CfgFunctions {
     // add your own functions below
+	#include "INC_undercover\cfgFunctions.hpp"
 };
 
 // CBA XEH
@@ -46,8 +47,11 @@ class Extended_InitPost_EventHandlers {
     class Ship {
         #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
     };
+	class CAManBase {
+		init = "_this call (compile preprocessFileLineNumbers 'postInitXEH.sqf')";
+	};
 };
-
+disableChannels[] = {0,1,3,6};
 respawn = 3;
 respawnDelay = 2;
 respawnDialog = 0;
@@ -57,3 +61,14 @@ respawnTemplates[] = {"MenuPosition", "Tickets"};
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
 corpseManagerMode = 0;
+
+class CfgRemoteExec
+{
+   class Functions
+   {
+       mode = 2;
+       jip = 1;
+       #include "INC_undercover\functionsWhitelist.hpp"
+   };
+};
+
