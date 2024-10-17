@@ -1,28 +1,20 @@
-/*
 btc_custom_loc = [
-[[16550.4,5349.75],"NameCity","",600,true],
-[[12122.4,2853.5],"NameCity","",600,true],
-[[10638.4,3943.81],"NameCity","",600,true],
-[[10465.8,9254.55],"NameCity","",600,true],
-[[5202.8,18503],"NameCity","",600,true],
-[[9128.04,19876],"NameCity","",600,true],
-[[12085,19534.2],"NameCity","",600,true],
-[[15256.1,9931.47],"NameCity","",600,true],
-[[12499.8,18564.4],"NameCity","",600,true],
-[[12954.6,17224.7],"NameCity","",600,true],
-[[19425.4,14420.6],"NameCity","",600,true],
-[[14803.3,14733.5],"NameCity","",600,true],
-[[14309.8,15972.9],"NameCity","",600,true],
-[[16286.4,6544.55],"Invisible","",600,true],
-[[20343.6,5141.82],"Invisible","",600,true],
-[[19202.9,2167.64],"Invisible","",600,true],
-[[4158.67,849.163],"Invisible","",600,true],
-[[2027.96,1668.59],"Invisible","",600,true],
-[[1062.84,3803.48],"Invisible","",600,true],
-[[2823.5,19502.9],"Invisible","",600,true],
-[[15051.6,11820.5],"Invisible","",600, true]
+[[10736.1,1842.31],"Invisible","",600,true],
+[[7735.86,1214.35],"Invisible","",600,true],
+[[13105.7,8886.83],"Invisible","",600,true],
+[[13000.6,6825.54],"Invisible","",600,true],
+[[3458.49,13151.7],"Invisible","",600,true],
+[[5558.46,7753.94],"Invisible","",600,true],
+[[12750.4,12914.2],"Invisible","",600,true],
+[[11826.5,11460.2],"Invisible","",600, true],
+[[13150.5,14000.8],"Invisible","",600, true],
+[[11679.9,7557.85],"Invisible","",600, true],
+[[2775.61,10885.4],"Invisible","",600, true],
+[[2988.62,14289.5],"Invisible","",600, true],
+[[12506.8,9713.32],"Invisible","",600, true],
+[[12740,8486.87],"NameCity","",600, true],
+[[5518.85,5749.92],"NameCity","",600, true],
 ];
-*/
 /*
     DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS (Number),IS OCCUPIED(Bool)]
     Possible types: "NameVillage","NameCity","NameCityCapital","NameLocal","Hill","Airport","NameMarine", "StrongpointArea", "BorderCrossing", "VegetationFir"
