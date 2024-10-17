@@ -676,7 +676,7 @@ btc_lift_HUD_y  = 0.848;
 btc_hq = objNull;
 // Get all faction from mod there are currently running
 //copyToClipboard str (["EN"] call btc_fnc_get_class);
-private _allfaction = ["CFP_O_HEZBOLLAH"]; //All factions
+private _allfaction = ["CFP_I_WESTULTRA"]; //All factions
 _p_en = _allfaction select _p_en; //Select faction selected from mission parameter
 _allclasse = [[_p_en], _p_en_AA, _p_en_tank] call btc_mil_fnc_class; //Create classes from factions, you can combine factions like that: [[_p_en , "IND_F"], _p_en_AA, _p_en_tank] call btc_mil_fnc_class;
 
@@ -707,57 +707,109 @@ switch (_p_en) do {
         btc_type_motorized = btc_type_motorized + ["I_Truck_02_transport_F", "I_Truck_02_covered_F"];
         btc_type_motorized_armed = btc_type_motorized_armed + ["I_Heli_light_03_F"];
     };
-    case "CFP_O_HEZBOLLAH" : {
-        btc_type_motorized = btc_type_motorized + [
-							"CUP_C_Golf4_black_Civ",
-							"CUP_C_Golf4_crowe_Civ",
-							"C_Hatchback_01_F",
-							"C_Truck_02_fuel_F",
-							"C_Truck_02_covered_F",
-							"CUP_C_Octavia_CIV",
-							"C_Quadbike_01_F",
-							"C_Van_01_transport_F",
-							"C_Van_02_vehicle_F",
-							"CFP_C_AFG_Datsun_Pickup_Covered_01",
-							"CFP_C_AFG_Lada_01",
-							"CFP_C_AFG_Skoda_Octavia_01",
+    case "CFP_I_WESTULTRA" : {
+        btc_type_motorized = btc_type_motorized + 
+                            [
+							"CUP_I_Pickup_Unarmed_PMC", 
+							"CUP_I_LSV_02_unarmed_ION", 
+							"CUP_I_SUV_ION", 
+							"CUP_B_M1151_NATO_T", 
+							"CUP_B_nM1025_Unarmed_NATO_T", 
+							"CUP_B_nM1038_NATO_T", 
+							"CUP_B_nM1038_4s_NATO_T", 
+							"CFP_B_USCIA_MB_4WD_01", 
+							"CUP_C_Datsun_4seat", 
+							"CUP_C_Golf4_black_Civ", 
+							"CUP_C_Golf4_blue_Civ", 
+							"CUP_C_Golf4_green_Civ", 
+							"CUP_C_Golf4_camodark_Civ", 
+							"CUP_C_Golf4_camodigital_Civ", 
+							"CUP_C_Golf4_camo_Civ", 
+							"CUP_C_Golf4_white_Civ", 
+							"CUP_C_Golf4_yellow_Civ", 
+							"C_Offroad_02_unarmed_F", 
+							"C_Truck_02_covered_F", 
+							"C_Offroad_01_F", 
+							"C_Offroad_01_covered_F", 
+							"CUP_C_Pickup_unarmed_CIV", 
+							"CUP_C_Octavia_CIV", 
+							"C_Quadbike_01_F", 
+							"C_Tractor_01_F", 
+							"C_Van_02_transport_F", 
+							"CFP_C_AFG_Datsun_Pickup_Covered_01", 
+							"CFP_C_AFG_Lada_01", 
+							"CFP_C_AFG_Skoda_Octavia_01", 
+							"CFP_C_AFG_Skoda_105_L_01", 
+							"CFP_C_AFG_SUV_01",
 							"CFP_C_AFG_SUV_01",
 							"CFP_C_AFRCHRISTIAN_Ikarus_01",
 							"CFP_C_AFRCHRISTIAN_Pickup_Old_01",
 							"CFP_C_AFRCHRISTIAN_Land_Rover_01",
 							"CFP_C_AFRCHRISTIAN_UAZ_Open_01",
+							"CFP_C_AFG_SUV_01", 
+							"CFP_C_AFRCHRISTIAN_Ikarus_01",
+							"CFP_C_AFRCHRISTIAN_Pickup_Old_01",
+							"CFP_C_AFRCHRISTIAN_Land_Rover_01",
+							"CFP_C_AFRCHRISTIAN_UAZ_Open_01",
+							"CFP_C_AFRISLAMIC_Land_Rover_01",
 							"CFP_C_AFRISLAMIC_Land_Rover_01",
 							"CFP_C_AFRISLAMIC_Skoda_Blue_01",
 							"CFP_O_RUMVD_Ural_Open_01",
-							"CFP_C_AFRISLAMIC_Ural_Blue_01",
+							"CFP_C_AFRISLAMIC_Land_Rover_01", 
+							"CFP_C_AFRISLAMIC_Skoda_Blue_01",
+							"CFP_O_RUMVD_Ural_Open_01",
+							"CFP_C_AFRISLAMIC_Ural_Blue_01", 
+							"CFP_C_AFRISLAMIC_Ural_Yellow_01", 
+							"CFP_C_ASIA_Praga_V3S_01",
 							"CFP_C_ASIA_Praga_V3S_01",
 							"CFP_C_CHERNO_WIN_UAZ_TAN_01",
-							"CUP_C_S1203_CIV_CR",
-							"CUP_C_Lada_White_CIV",
-							"CUP_C_UAZ_Unarmed_TK_CIV",
-							"CUP_C_Bus_City_CIV"
+							"CFP_C_ASIA_Praga_V3S_01", 
+							"CFP_C_CHERNO_WIN_UAZ_TAN_01",
+							"CUP_C_S1203_CIV_CR", 
+							"CUP_C_Tigr_4x4_CIV", 
+							"CUP_O_Hilux_unarmed_TK_CIV", 
+							"CUP_O_Hilux_unarmed_TK_CIV_Red", 
+							"CUP_O_Hilux_unarmed_TK_CIV_Tan", 
+							"CUP_O_Hilux_unarmed_TK_CIV_White", 
+							"CUP_C_Ikarus_Chernarus", 
+							"CFP_C_AFRCHRISTIAN_Ikarus_01", 
+							"CFP_C_ME_Ikarus_01", 
+							"CUP_C_Ikarus_TKC"
 							];
-        btc_type_motorized_armed = btc_type_motorized_armed + [
-							"CFP_O_IS_Hilux_Armored_01",
-							"CFP_O_IS_Hilux_BMP1_Armored_01",
-							"CFP_O_IS_Hilux_BTR60_Armored_01",
-							"CFP_O_IS_Hilux_DSHKM_Armored_01",
-							"CFP_O_IS_Hilux_Metis_Armored_01",
-							"CFP_O_IS_Hilux_MLRS_Armored_01",
-							"CFP_O_IS_Hilux_SPG_Armored_01",
-							"CFP_O_IS_Hilux_UB_32_Armored_01",
-							"cfp_o_is_LR_M2",
-							"CFP_O_SSREBELS_Pickup_PK_01"] - ["CFP_O_HEZBOLLAH_T55_01", "CFP_O_HEZBOLLAH_T55_flag_01", "CFP_O_HEZBOLLAH_T72_01", "CFP_O_HEZBOLLAH_T72_flag_01"];
+        btc_type_motorized_armed = btc_type_motorized_armed + 
+                            [
+							"CUP_I_SUV_Armored_ION", 
+							"CUP_I_CESSNA_T41_ARMED_ION", 
+							"CUP_B_nM1025_SOV_M2_NATO_T"
+							];
 
-        btc_type_units = btc_type_units + [
-							"CUP_O_TK_INS_Guerilla_Medic",
-							"CUP_O_TK_INS_Soldier_AR",
-							"CUP_O_TK_INS_Soldier_AAT",
-							"CUP_O_TK_INS_Soldier_FNFAL",
-							"CUP_O_TK_INS_Bomber",
-							"CUP_O_TK_INS_Soldier_AT",
-							"CUP_O_TK_INS_Soldier_MG",
-							"CUP_O_TK_INS_Sniper"];
+        btc_type_units = btc_type_units + 
+                            [
+							"I_L_Criminal_SG_F", 
+							"I_L_Criminal_SMG_F", 
+							"I_L_Looter_SG_F", 
+							"I_L_Looter_SMG_F", 
+							"I_C_Soldier_Bandit_5_F", 
+							"I_C_Soldier_Bandit_1_F", 
+							"CFP_I_SDRebelsrf_Soldier_02", 
+							"I_C_Soldier_Bandit_7_F", 
+							"I_C_Soldier_Bandit_3_F", 
+							"I_C_Soldier_Bandit_8_F", 
+							"I_C_Soldier_Bandit_4_F", 
+							"CUP_I_PMC_Bodyguard_M4", 
+							"CUP_I_PMC_Contractor1", 
+							"CUP_I_PMC_Contractor2", 
+							"CUP_I_PMC_Medic", 
+							"CUP_I_PMC_Soldier_AT", 
+							"CUP_I_PMC_Soldier_M4A3", 
+							"CUP_I_PMC_Soldier", 
+							"CUP_I_PMC_Soldier_TL"
+							];
+											
+		btc_type_crewmen = [
+		"I_C_Pilot_F", 
+		"CUP_I_PMC_Crew"
+		];
     };
 };
 
