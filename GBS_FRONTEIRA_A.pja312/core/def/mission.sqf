@@ -168,10 +168,10 @@ if (isServer) then {
     //IED
     btc_ied_suic_time = 900;
     btc_ied_suic_spawned = - btc_ied_suic_time;
-    btc_ied_offset = [0, -0.03, -0.07] select _p_ied_spot;
+    btc_ied_offset = [0, -0.03, 0] select _p_ied_spot;
     btc_ied_list = [];
-    btc_ied_range = 8;
-    btc_ied_power = ["Bo_GBU12_LGB_MI10", "12Rnd_230mm_rockets"] select btc_p_ied_power;
+    btc_ied_range = 0;
+    btc_ied_power = ["APERSBoundingMine_Range_Ammo", "APERSTripMine_Wire_Ammo"] select btc_p_ied_power;
 
     //FOB
     btc_fobs = [[], [], []];
@@ -347,7 +347,36 @@ if (isServer) then {
     btc_type_flowers = _allClassSorted select {_x isKindOf "FlowerBouquet_base_F"};
 
     //IED
-    private _ieds = ["Land_GarbageContainer_closed_F", "Land_GarbageContainer_open_F", "Land_Portable_generator_F", "Land_WoodenBox_F", "Land_BarrelTrash_grey_F", "Land_Sacks_heap_F", "Land_Wreck_Skodovka_F", "Land_WheelieBin_01_F", "Land_GarbageBin_03_F"] + btc_type_pallet + btc_type_barrel + (_allClassSorted select {
+    private _ieds = 
+        [   "c_rock_stones",
+            "Land_Bare_boulder_02_F", 
+            "Land_RM_boulder2", 
+            "Land_RM_boulder1", 
+            "Land_Cliff_stoneCluster_F", 
+            "Land_SharpStones_erosion", 
+            "Land_dirt_road_rocks_01_F", 
+            "c_red_dirt_small_stones", 
+            "c_red_dirt_large_stones", 
+            "c_red_dirt_small_stones1", 
+            "c_red_dirt_small_stones2", 
+            "c_volcano_stones", 
+            "CUP_Stone3_clutter",
+            "CUP_vetev_1_buk", 
+            "CUP_p_Helianthus_summer", 
+            "c_plant_greenbunch", 
+            "c_flower_brushmedium_white", 
+            "t_PopulusN3s_leaf", 
+            "b_NeriumO2s_leaf", 
+            "c_branches_deciduous", 
+            "c_branches_picea", 
+            "c_branchesBig_picea", 
+            "c_forest_violet_leaves", 
+            "c_forest_violet_single", 
+            "c_Grass_short_nettle", 
+            "d_FallenTrunk_roots"
+        ];
+    /* ORIGINAL
+    ["Land_GarbageContainer_closed_F", "Land_GarbageContainer_open_F", "Land_Portable_generator_F", "Land_WoodenBox_F", "Land_BarrelTrash_grey_F", "Land_Sacks_heap_F", "Land_Wreck_Skodovka_F", "Land_WheelieBin_01_F", "Land_GarbageBin_03_F"] + btc_type_pallet + btc_type_barrel + (_allClassSorted select {
         _x isKindOf "GasTank_base_F" ||
         {_x isKindOf "Garbage_base_F"} ||
         {_x isKindOf "Stall_base_F"} ||
@@ -361,7 +390,7 @@ if (isServer) then {
             "car" in toLower _x ||
             "offroad" in toLower _x
         })
-    });
+    });*/
     btc_type_ieds = _ieds - ["Land_Garbage_line_F","Land_Garbage_square3_F","Land_Garbage_square5_F", "Land_MarketShelter_F", "Land_ClothShelter_01_F", "Land_ClothShelter_02_F"];
     btc_model_ieds = btc_type_ieds apply {(toLower getText(_cfgVehicles >> _x >> "model")) select [1]};
     btc_type_blacklist = btc_type_tags + btc_type_flowers + ["UserTexture1m_F"]; publicVariable "btc_type_blacklist";
@@ -415,7 +444,7 @@ btc_fob_id = 0;
 btc_fob_minDistance = 1500;
 
 //IED
-btc_type_ieds_ace = ["IEDLandBig_F", "IEDLandSmall_F"];
+btc_type_ieds_ace = ["APERSTripMine"];
 btc_ied_deleteOn = -1;
 
 //Int
@@ -809,13 +838,22 @@ switch (_p_en) do {
 							"CUP_I_PMC_Soldier", 
 							"CUP_I_PMC_Soldier_TL"
 							];
-											
-		btc_type_crewmen = 
-        [
-		"I_C_Pilot_F", 
-		"CUP_I_PMC_Crew"
-		];
         btc_type_boats = 
+        [
+            "B_G_Boat_Transport_01_F", 
+            "CFP_B_USMC_Zodiac_DES_01", 
+            "I_C_Boat_Transport_02_F", 
+            "braf_voadeira_03", 
+            "braf_voadeira_04", 
+            "braf_voadeira_05", 
+            "braf_voadeira_06", 
+            "C_Boat_Civil_01_F", 
+            "C_Boat_Transport_02_F", 
+            "C_Scooter_Transport_01_F", 
+            "CFP_C_ASIA_Fishing_Boat_01", 
+            "CUP_C_PBX_CIV"
+        ];
+        btc_type_divers = 
         [
             "B_G_Boat_Transport_01_F", 
             "CFP_B_USMC_Zodiac_DES_01", 
