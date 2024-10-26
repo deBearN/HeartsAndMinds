@@ -57,16 +57,36 @@ _church = _churchSorted select 0 select 1;
 
 private _group = createGroup civilian;
 private _civilians = [];
+private _composition = [];
 private _tasksID = [];
-for "_i" from 1 to 2 do { // (2 + round random 2)
-    _pos = [_road, 3] call btc_ied_fnc_randomRoadPos;
-    _pos = _pos select 0;
-
-    private _direction = [_road] call btc_fnc_road_direction;
+for "_i" from 1 to (2 + round random 3) do { // (2 + round random 2)
+    private _roadPos = [_road, 3] call btc_ied_fnc_randomRoadPos;
+     _roadPos params ["_pos", "_dir"];
+    _pos = _pos getPos [random 5, _dir];
     private _unit = _group createUnit [selectRandom btc_civ_type_units, _pos, [], 0, "CAN_COLLIDE"];
+    if (selectRandom [true, false]) then {
+        [position _unit, 0.05, 1.5] call BIS_fnc_flies;
+    };
+    _unit setDir random 360;
     _unit setVariable ["btc_dont_delete", true];
     _unit setDamage 1;
     _civilians pushBack _unit;
+
+    _roadPos params ["_pos", "_dir"];
+    _pos = _pos getPos [random 2, _dir];
+    private _obj = createVehicle [selectRandom btc_type_bloods, _pos, [], 0, "CAN_COLLIDE"];
+    _obj setVectorUp surfaceNormal _pos;
+    _obj setDir random 360;
+    _composition pushBack _obj;
+
+    private _roadPos = [_road, 3] call btc_ied_fnc_randomRoadPos;
+    _roadPos params ["_pos", "_dir"];
+    _pos = _pos getPos [random 10, _dir];
+    private _objtType = selectRandom (btc_type_sports + ["Land_Suitcase_F"] + btc_type_sleepingbag_folded);
+    private _obj = createVehicle [_objtType, _pos, [], 0, "CAN_COLLIDE"];
+    _obj setDir random 360;
+    _obj addTorque [6,0,0];
+    _composition pushBack _obj;
 
     private _civ_taskID = _taskID + "cv" + str _i;
     _tasksID pushBack _civ_taskID;
@@ -105,7 +125,7 @@ waitUntil {sleep 5;
     _civilians select {!isNull _x} isEqualTo []
 };
 
-[[], _civilians + [_group]] call btc_fnc_delete;
+[[], _civilians + [_group] + _composition] call btc_fnc_delete;
 
 if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {};
 
