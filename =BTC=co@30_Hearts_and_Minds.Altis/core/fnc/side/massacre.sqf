@@ -3,7 +3,7 @@
 Function: btc_side_fnc_massacre
 
 Description:
-    Fill me when you edit me !
+    Move all dead civilians in a grave next to a church
 
 Parameters:
     _taskID - Unique task ID. [String]
@@ -59,10 +59,12 @@ private _group = createGroup civilian;
 private _civilians = [];
 private _tasksID = [];
 for "_i" from 1 to 2 do { // (2 + round random 2)
-    _pos = getPos _road;
+    _pos = [_road, 3] call btc_ied_fnc_randomRoadPos;
+    _pos = _pos select 0;
 
     private _direction = [_road] call btc_fnc_road_direction;
     private _unit = _group createUnit [selectRandom btc_civ_type_units, _pos, [], 0, "CAN_COLLIDE"];
+    _unit setVariable ["btc_dont_delete", true];
     _unit setDamage 1;
     _civilians pushBack _unit;
 
@@ -70,6 +72,9 @@ for "_i" from 1 to 2 do { // (2 + round random 2)
     _tasksID pushBack _civ_taskID;
     [[_civ_taskID, _taskID], 43, _unit, typeOf _unit, false, false] call btc_task_fnc_create;
     _unit setVariable ["btc_rep_playerKiller", _civ_taskID];
+    if (roadsConnectedTo _road isNotEqualTo []) then {
+        _road = (roadsConnectedTo _road) select 0;
+    };
 };
 
 ["ace_placedInBodyBag", {
@@ -89,6 +94,7 @@ for "_i" from 1 to 2 do { // (2 + round random 2)
         };
     } else {
         _thisArgs pushBack _bodyBag;
+        [_taskID, _bodyBag] call BIS_fnc_taskSetDestination;
     };
 }, _civilians] call CBA_fnc_addEventHandlerArgs;
 
@@ -103,11 +109,8 @@ waitUntil {sleep 5;
 
 if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {};
 
-if ("SUCCEEDED" in (_tasksID apply {_x call BIS_fnc_taskState})) then {
-    {
-        [_x, "FAILED"] call BIS_fnc_taskSetState;
-    } forEach (_tasksID select {!(_x call BIS_fnc_taskCompleted)});
-    [_taskID, "SUCCEEDED"] call btc_task_fnc_setState;
-} else {
+if ("FAILED" in (_tasksID apply {_x call BIS_fnc_taskState})) then {
     [_taskID, "FAILED"] call btc_task_fnc_setState;
-};
+} else {
+    [_taskID, "SUCCEEDED"] call btc_task_fnc_setState;
+}
