@@ -3,7 +3,7 @@
 Function: btc_side_fnc_massacre
 
 Description:
-    Move all dead civilians in a grave next to a church
+    Move all dead civilians in a grave next to a church, inspired by Bucha massacre (Ukraine).
 
 Parameters:
     _taskID - Unique task ID. [String]
@@ -59,6 +59,9 @@ private _group = createGroup civilian;
 private _civilians = [];
 private _composition = [];
 private _tasksID = [];
+private _objtTypes = btc_type_sports + ["Land_Suitcase_F"] + btc_type_sleepingbag_folded;
+[_objtTypes, true] call CBA_fnc_shuffle;
+
 for "_i" from 1 to (2 + round random 3) do { // (2 + round random 2)
     private _roadPos = [_road, 3] call btc_ied_fnc_randomRoadPos;
      _roadPos params ["_pos", "_dir"];
@@ -75,15 +78,14 @@ for "_i" from 1 to (2 + round random 3) do { // (2 + round random 2)
     _roadPos params ["_pos", "_dir"];
     _pos = _pos getPos [random 2, _dir];
     private _obj = createVehicle [selectRandom btc_type_bloods, _pos, [], 0, "CAN_COLLIDE"];
-    _obj setVectorUp surfaceNormal _pos;
     _obj setDir random 360;
+    _obj setVectorUp surfaceNormal _pos;
     _composition pushBack _obj;
 
     private _roadPos = [_road, 3] call btc_ied_fnc_randomRoadPos;
     _roadPos params ["_pos", "_dir"];
     _pos = _pos getPos [random 10, _dir];
-    private _objtType = selectRandom (btc_type_sports + ["Land_Suitcase_F"] + btc_type_sleepingbag_folded);
-    private _obj = createVehicle [_objtType, _pos, [], 0, "CAN_COLLIDE"];
+    private _obj = createVehicle [_objtTypes deleteAt 0, _pos, [], 0, "CAN_COLLIDE"];
     _obj setDir random 360;
     _obj addTorque [6,0,0];
     _composition pushBack _obj;
