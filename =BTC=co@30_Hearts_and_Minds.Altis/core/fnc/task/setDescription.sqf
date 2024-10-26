@@ -393,6 +393,23 @@ switch (_description) do {
         ];
         _type = "search";
     };
+    case 42 : {
+        _location params ["_name", "_typeOf_church"];
+        _description = [
+            (localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_DESC") + ([_typeOf_church] call btc_fnc_typeOfPreview),
+            localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_TITLE",
+            localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_TITLE"
+        ];
+        _type = "default";
+    };
+    case 43 : {
+        _description = [
+            (localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_DESC") + ([_location] call btc_fnc_typeOfPreview),
+            localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_TITLE",
+            localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_TITLE"
+        ];
+        _type = "interact";
+    };
 };
 
 [
