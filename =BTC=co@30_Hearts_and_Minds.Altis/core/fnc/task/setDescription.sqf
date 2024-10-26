@@ -396,17 +396,18 @@ switch (_description) do {
     case 42 : {
         _location params ["_name", "_typeOf_church"];
         _description = [
-            (localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_DESC") + ([_typeOf_church] call btc_fnc_typeOfPreview),
-            localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_TITLE",
-            localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_TITLE"
+            format [localize "STR_BTC_HAM_SIDE_MASSACRE_DESC", _name] + ([_typeOf_church] call btc_fnc_typeOfPreview),
+            format [localize "STR_BTC_HAM_SIDE_MASSACRE_TITLE", _name],
+            format [localize "STR_BTC_HAM_SIDE_MASSACRE_TITLE", _name]
         ];
         _type = "default";
     };
     case 43 : {
+        _location params ["_name", "_typeOf_civ"];
         _description = [
-            (localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_DESC") + ([_location] call btc_fnc_typeOfPreview),
-            localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_TITLE",
-            localize "STR_BTC_HAM_SIDE_PANDEMIC_DECON_TITLE"
+            (localize "STR_BTC_HAM_SIDE_MASSACRE_C_DESC") + ([_typeOf_civ] call btc_fnc_typeOfPreview),
+            format [localize "STR_BTC_HAM_SIDE_MASSACRE_C_TITLE", _name],
+            format [localize "STR_BTC_HAM_SIDE_MASSACRE_C_TITLE", _name]
         ];
         _type = "interact";
     };

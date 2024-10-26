@@ -62,7 +62,7 @@ private _tasksID = [];
 private _objtTypes = btc_type_sports + ["Land_Suitcase_F"] + btc_type_sleepingbag_folded;
 [_objtTypes, true] call CBA_fnc_shuffle;
 
-for "_i" from 1 to (2 + round random 3) do { // (2 + round random 2)
+for "_i" from 1 to (2 + round random 3) do {
     private _roadPos = [_road, 3] call btc_ied_fnc_randomRoadPos;
      _roadPos params ["_pos", "_dir"];
     _pos = _pos getPos [random 5, _dir];
@@ -92,7 +92,7 @@ for "_i" from 1 to (2 + round random 3) do { // (2 + round random 2)
 
     private _civ_taskID = _taskID + "cv" + str _i;
     _tasksID pushBack _civ_taskID;
-    [[_civ_taskID, _taskID], 43, _unit, typeOf _unit, false, false] call btc_task_fnc_create;
+    [[_civ_taskID, _taskID], 43, _unit, [name _unit, typeOf _unit], false, false] call btc_task_fnc_create;
     _unit setVariable ["btc_rep_playerKiller", _civ_taskID];
     if (roadsConnectedTo _road isNotEqualTo []) then {
         _road = (roadsConnectedTo _road) select 0;
@@ -119,8 +119,6 @@ for "_i" from 1 to (2 + round random 3) do { // (2 + round random 2)
         [_taskID, _bodyBag] call BIS_fnc_taskSetDestination;
     };
 }, _civilians] call CBA_fnc_addEventHandlerArgs;
-
-a = _civilians;
 
 waitUntil {sleep 5;
     _taskID call BIS_fnc_taskCompleted ||
