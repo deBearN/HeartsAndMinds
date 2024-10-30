@@ -95,3 +95,6 @@ At the beginning you have a very low reputation level, so civilians won't help y
 - [Contributors](https://github.com/Vdauphin/HeartsAndMinds/graphs/contributors)
 
 Any support or feedback is always welcome and appreciated!
+
+
+This repository is made to keep the GBS Unit missions saved
