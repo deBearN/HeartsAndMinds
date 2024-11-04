@@ -65,7 +65,7 @@ Any player can retrieve dead player's body by:
    - Interact with the logistic point
    - Select "Get tickets from body bag or prisoner"
 
-The ticket from the body bag will go to the player owned the dead body (even if he is not connected). 
+The ticket from the body bag will go to the player owned the dead body (even if he is not connected). Dead body can also be directly processed.
 ### Prisoners:
 Prisoners follow the same process as dead player body without the need of body bag. The prisonner need to be alive but it could be unconcious.
 
