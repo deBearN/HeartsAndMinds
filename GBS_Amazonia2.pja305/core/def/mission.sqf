@@ -2,7 +2,11 @@
 btc_version = [
     1,
     24,
+<<<<<<< HEAD:GBS_Amazonia2.pja305/core/def/mission.sqf
     2
+=======
+    4
+>>>>>>> main:=BTC=co@30_Hearts_and_Minds.Altis/core/def/mission.sqf
 ];
 diag_log format (["=BTC= HEARTS AND MINDS VERSION %1.%2.%3"] + btc_version);
 

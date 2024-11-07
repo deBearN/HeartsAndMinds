@@ -21,8 +21,13 @@ Post war anti insurgency dynamic mission with focus on good relations with civil
 </p>
 
 <p align="center">
+<<<<<<< HEAD
     <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.24.2">
         <img src="https://img.shields.io/badge/Version-1.24.2-blue.svg?style=flat-square" alt="H&M Version">
+=======
+    <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.24.4">
+        <img src="https://img.shields.io/badge/Version-1.24.4-blue.svg?style=flat-square" alt="H&M Version">
+>>>>>>> main
     </a>
     <a href="https://somsubhra.github.io/github-release-stats/?username=vdauphin&repository=HeartsAndMinds&page=1&per_page=300">
         <img src="https://img.shields.io/github/downloads/Vdauphin/HeartsAndMinds/total.svg?style=flat-square&label=Downloads" alt="H&M Downloads">
@@ -95,3 +100,6 @@ At the beginning you have a very low reputation level, so civilians won't help y
 - [Contributors](https://github.com/Vdauphin/HeartsAndMinds/graphs/contributors)
 
 Any support or feedback is always welcome and appreciated!
+
+
+This repository is made to keep the GBS Unit missions saved
