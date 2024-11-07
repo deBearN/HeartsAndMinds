@@ -1,20 +1,29 @@
 btc_custom_loc = [
-[[10736.1,1842.31],"Invisible","",300,true],
-[[7735.86,1214.35],"StrongpointArea","",300,true],
-[[13105.7,8886.83],"Invisible","",300,true],
-[[13000.6,6825.54],"Invisible","",300,true],
-[[3458.49,13151.7],"Invisible","",300,true],
-[[5558.46,7753.94],"StrongpointArea","",300,true],
-[[12750.4,12914.2],"Invisible","",300,true],
-[[11826.5,11460.2],"StrongpointArea","",300, true],
-[[13150.5,14000.8],"StrongpointArea","",300, true],
-[[11679.9,7557.85],"StrongpointArea","",300, true],
-[[2775.61,10885.4],"StrongpointArea","",300, true],
-[[2988.62,14289.5],"StrongpointArea","",300, true],
-[[12506.8,9713.32],"StrongpointArea","",300, true],
-[[12740,8486.87],"NameCity","",300, true],
-[[5518.85,5749.92],"NameCity","",300, true],
-[[12970.4,13222],"StrongpointArea","",300, true]
+[[17715.8,8212.01],"StrongpointArea","",300,true],//1
+[[18204.8,8476.59],"StrongpointArea","",300,true],//2
+[[18223.5,10113.8],"StrongpointArea","",300,true],//3
+[[16024.1,11936.8],"Hill","",300,true],//4
+[[17664.2,13943.2],"StrongpointArea","",300,true],//5
+[[18470.2,16907.2],"Hill","",300,true],//6
+[[15095.9,16702.3],"StrongpointArea","",300,true],//7
+[[12976.6,13332.8],"StrongpointArea","",300, true],//8
+[[11196.5,16709.3],"Invisible","",300, true],//9
+[[9458.11,15076.6],"Invisible","",300, true],//10
+[[3820.1,16574.1],"StrongpointArea","",300, true],//11
+[[5865.87,14744.5],"StrongpointArea","",300, true],//12
+[[5680.9,14441],"NameCity","",300, true],//13
+[[4180.77,14365.1],"NameCity","",300, true],//14
+[[4233.02,13926.5],"NameCity","",300, true],//15
+[[4286.36,14357.8],"StrongpointArea","",300, true],//16
+[[4380.86,13970.7],"StrongpointArea","",300, true],//17
+[[5005.53,13863.3],"StrongpointArea","",300, true],//18
+[[3652.57,13684.9],"Invisible","",300, true],//19
+[[4833.37,13702.8],"NameCity","",300, true],//20
+[[4822.93,13154.1],"NameCity","",300, true],//21
+[[4250.8,13115.2],"StrongpointArea","",300, true],//22
+[[5218.64,13023.6],"StrongpointArea","",300, true],//23
+[[4695.7,12154.8],"StrongpointArea","",300, true],//24
+[[4380.86,13970.7],"StrongpointArea","",300, true],//25
 ];
 /*
     DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS (Number),IS OCCUPIED(Bool)]
