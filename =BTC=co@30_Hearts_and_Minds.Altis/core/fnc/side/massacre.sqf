@@ -75,6 +75,10 @@ for "_i" from 1 to (2 + round random 3) do {
     _unit setDamage 1;
     _civilians pushBack _unit;
 
+    private _obj = createVehicle [selectRandom (btc_type_bootles + ["Land_FMradio_F", "Land_MobilePhone_smart_F","Land_RiceBox_F", "Land_Orange_01_F"]), _pos, [], 2, "NONE"];
+    _obj addTorque [4,0,0];
+    _composition pushBack _obj;
+
     _roadPos params ["_pos", "_dir"];
     _pos = _pos getPos [random 2, _dir];
     private _obj = createVehicle [selectRandom btc_type_bloods, _pos, [], 0, "CAN_COLLIDE"];
