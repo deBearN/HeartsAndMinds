@@ -112,12 +112,15 @@ for "_i" from 1 to (2 + round random 3) do {
     _thisArgs deleteAt (_thisArgs find _patient);
     private _taskID = _patient getVariable ["btc_rep_playerKiller", ""];
     if (_isGrave) then {
-        private _church = nearestTerrainObjects [_restingPlace, ["CHURCH", "CHAPEL"], 50];
-        if (_church isEqualTo []) then {
-            [_taskID, "FAILED"] call BIS_fnc_taskSetState;
-        } else {
-            [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
-        };
+        [{
+            params ["_restingPlace", "_taskID"];
+            private _church = nearestTerrainObjects [_restingPlace, ["CHURCH", "CHAPEL"], 50];
+            if (_church isEqualTo []) then {
+                [_taskID, "FAILED"] call BIS_fnc_taskSetState;
+            } else {
+                [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
+            };
+        }, [_bodyBag, _taskID], 0.2] call CBA_fnc_waitAndExecute;
     } else {
         _thisArgs pushBack _bodyBag;
         [_taskID, _bodyBag] call BIS_fnc_taskSetDestination;
