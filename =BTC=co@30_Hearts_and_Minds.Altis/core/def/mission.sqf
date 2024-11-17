@@ -219,6 +219,7 @@ if (isServer) then {
     btc_type_bigbox = ["Box_FIA_Ammo_F", "Box_East_AmmoVeh_F", "CargoNet_01_box_F", "O_CargoNet_01_ammo_F"] + btc_type_Scrapyard;
     btc_type_seat = ["Land_WoodenLog_F", "Land_CampingChair_V2_F", "Land_CampingChair_V1_folded_F", "Land_CampingChair_V1_F"];
     btc_type_sleepingbag = _allClassSorted select {_x isKindOf "Land_Sleeping_bag_F"};
+    btc_type_sleepingbag_folded = _allClassSorted select {_x isKindOf "Land_Sleeping_bag_folded_F"};
     btc_type_tent = ["Land_TentA_F", "Land_TentDome_F"] + (_allClassSorted select {
         _x isKindOf "Land_TentSolar_01_base_F" &&
         {!(_x isKindOf "Land_TentSolar_01_folded_base_F")}
@@ -228,7 +229,7 @@ if (isServer) then {
 
     //Side
     btc_side_ID = 0;
-    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "civtreatment", "checkpoint", "convoy", "rescue", "capture_officer", "hostage", "hack", "kill", "EMP", "removeRubbish"]; // On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
+    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "civtreatment", "checkpoint", "convoy", "rescue", "capture_officer", "hostage", "hack", "kill", "EMP", "removeRubbish", "massacre"]; // On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
     if (btc_p_sea) then {btc_side_list append ["civtreatment_boat", "underwater_generator"]}; // On sea
     if (btc_p_chem) then {btc_side_list append ["chemicalLeak", "pandemic"]};
     btc_side_list_use = [];
@@ -297,6 +298,8 @@ if (isServer) then {
     btc_type_cargoEMP = _allClassSorted select {_x isKindOf "Cargo_EMP_base_F"};
     btc_type_antenna = _allClassSorted select {_x isKindOf "OmniDirectionalAntenna_01_base_F"};
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
+    btc_type_sports = (_allClassSorted select {_x isKindOf "SportItems_base_F"}) select {"ball" in _x};
+    btc_type_bottles = (_allClassSorted select {_x isKindOf "Items_base_F"}) select {"Bottle" in _x and (not ("stack" in _x))};
 
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,
