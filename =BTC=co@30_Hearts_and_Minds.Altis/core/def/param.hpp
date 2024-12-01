@@ -415,8 +415,8 @@ class Params {
     };
     class btc_p_chem_cache_probability { // Advanced Chemical warfare setting to change probability of a chemical weapon cache
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_CHEM_CACHE_PROBABILITY"]);
-        values[]={10,20,30,40,50,60,70,80,90,100};
-        texts[]={"10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
+        values[]={0,10,20,30,40,50,60,70,80,90,100};
+        texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
         default = 50;
     };
     class btc_p_spect { // Spectrum devices
