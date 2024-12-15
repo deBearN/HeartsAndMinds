@@ -86,9 +86,7 @@ if (btc_p_auto_db) then {
     }];
 };
 
-private _isChem = (btc_p_chem_sides || (btc_p_chem_cache_probability > 0));
-
-if (_isChem) then {
+if (btc_p_chem_sides || (btc_p_chem_cache_probability > 0)) then {
     ["ace_cargoLoaded", btc_chem_fnc_propagate] call CBA_fnc_addEventHandler;
     ["AllVehicles", "GetIn", {[_this select 0, _this select 2] call btc_chem_fnc_propagate}] call CBA_fnc_addClassEventHandler;
     ["DeconShower_01_F", "init", {

@@ -19,9 +19,7 @@ Author:
 
 ---------------------------------------------------------------------------- */
 
-private _isChem = (btc_p_chem_sides || (btc_p_chem_cache_probability > 0));
-
-if !(_isChem) exitWith {};
+if !(btc_p_chem_sides || (btc_p_chem_cache_probability > 0)) exitWith {};
 
 private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
 
