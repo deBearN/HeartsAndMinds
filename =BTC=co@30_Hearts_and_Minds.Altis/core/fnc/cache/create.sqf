@@ -28,7 +28,7 @@ Author:
 
 params [
     ["_cache_pos", btc_cache_pos, [[]]],
-    ["_p_chem", (btc_p_chem_cache_probability > 0), [true]],
+    ["_p_chem", btc_p_chem_cache_probability > 0, [true]],
     ["_probabilityChemical", btc_p_chem_cache_probability, [0]]
 ];
 
