@@ -401,12 +401,6 @@ class Params {
         texts[] = {$STR_DISABLED,$STR_ENABLED};
         default = 1;
     };
-    class btc_p_chem { // Chemical warfare ON / OFF
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_CHEM"]);
-        values[] = {0,1};
-        texts[] = {$STR_DISABLED,$STR_ENABLED};
-        default = 1;
-    };
     class btc_p_chem_sides { // Advanced Chemical warfare setting to activate / deactivate chemical side missions
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_CHEM_SIDES"]);
         values[] = {0,1};
