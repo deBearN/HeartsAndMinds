@@ -967,7 +967,7 @@
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_GAMEPLAY_CHEM_CACHE_PROBABILITY">
                 <Original>Chemical weapon cache probability:</Original>
-                <French>Probabilité de cache d'armes chimique:</French>
+                <French>Probabilité de cache d'armes chimiques :</French>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_GAMEPLAY_SPECT">
                 <Original>Spectrum devices:</Original>
