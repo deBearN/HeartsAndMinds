@@ -210,12 +210,12 @@ if (isServer) then {
     btc_cache_weapons_type = _weapons_usefull apply {(toLower getText (_x >> "model")) select [1]};
 
     //Hideout classname
-    btc_type_campfire = ["MetalBarrel_burning_F"] + (_allClassSorted select {_x isKindOf "Land_Campfire_F"});
+    btc_type_campfire = ["Land_GarbageBarrel_02_buried_F"] + (_allClassSorted select {_x isKindOf "Land_MetalBarrel_F"});
     btc_type_Scrapyard = _allClassSorted select {
         _x isKindOf "Scrapyard_base_F" &&
         {!("scrap" in toLower _x)}
     };
-    btc_type_bigbox = ["Box_FIA_Ammo_F", "Box_East_AmmoVeh_F", "CargoNet_01_box_F", "O_CargoNet_01_ammo_F"] + btc_type_Scrapyard;
+    btc_type_bigbox = ["braf_crate_large_explosives", "CUP_BOX_GB_AmmoOrd_F", "Box_IND_AmmoOrd_F", "CUP_BOX_TK_AmmoOrd_F", "Box_NATO_AmmoOrd_F"] + btc_type_Scrapyard;
     btc_type_seat = ["Land_WoodenLog_F", "Land_CampingChair_V2_F", "Land_CampingChair_V1_folded_F", "Land_CampingChair_V1_F"];
     btc_type_sleepingbag = _allClassSorted select {_x isKindOf "Land_Sleeping_bag_F"};
     btc_type_tent = ["Land_TentA_F", "Land_TentDome_F"] + (_allClassSorted select {
