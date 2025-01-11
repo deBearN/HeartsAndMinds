@@ -55,7 +55,26 @@ btc_custom_loc = [
 [[12947.4,4690.1],"Namelocal","",175, true],//54
 [[14431.8,3348.63],"NameCity","",175, true],//55
 [[13231.1,6581.79],"StrongpointArea","",175, true],//56
-[[14757.9,7908.81],"Invisible","",200, true]//57
+[[14757.9,7908.81],"Invisible","",200, true],//57
+[[19290.1,3362.29],"NameVillage","",200, true],//58
+[[18496.2,11320.2],"NameVillage","",200, true],//59
+[[18420.6,12840.3],"NameVillage","",200, true],//60
+[[17059.9,15544.7],"NameVillage","",200, true],//61
+[[7730.04,18453.5],"NameVillage","",200, true],//62
+[[7483.87,16366.4],"StrongpointArea","",200, true],//63
+[[1352.9,12702.1],"StrongpointArea","",200, true],//64
+[[2348.23,1193.77],"NameVillage","",200, true],//65
+[[2900.06,3762.46],"NameVillage","",200, true],//66
+[[4570.21,8349.04],"Invisible","",200, true],//67
+[[7337.6,10672.4],"NameVillage","",200, true],//68
+[[13610.7,9768.1],"NameVillage","",200, true],//69
+[[12936.8,10657],"NameVillage","",200, true],//70
+[[13605.7,12090.7],"NameVillage","",200, true],//71
+[[4782.56,1630.22],"NameVillage","",200, true],//72
+[[4885.02,2803.84],"NameVillage","",200, true],//73
+[[3811.88,6839.85],"NameVillage","",200, true],//74
+[[17102.3,6861.47],"NameVillage","",200, true],//75
+[[17017.6,5452.3],"StrongpointArea","",200, true]//76
 ];
 /*
     DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS (Number),IS OCCUPIED(Bool)]
