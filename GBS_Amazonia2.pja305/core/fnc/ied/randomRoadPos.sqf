@@ -40,6 +40,6 @@ switch (floor random _p_ied_placement) do {
         [_road getPos [_roadRadius, _roadDir - 90], _roadDir]
     };
     default {
-        [_road getPos [_roadRadius * 0.5 - random(_roadRadius * 0.4), _roadDir + (90 * selectRandom [-1, 1])], random 360]
+        [_road getPos [_roadRadius * 1.5 - random(_roadRadius * 1.4), _roadDir + (90 * selectRandom [-1, 1])], random 360]
     };
 };

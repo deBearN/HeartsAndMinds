@@ -54,14 +54,14 @@ private _spawningRadius = _cachingRadius/2;
 
 if (!(_city getVariable ["initialized", false])) then {
     private _numberOfIED = (switch _type do {
-        case "Hill" : {1};
-        case "VegetationFir" : {1};
-        case "BorderCrossing" : {2};
-        case "NameLocal" : {2.5};
-        case "StrongpointArea" : {3};
-        case "NameVillage" : {3.5};
-        case "NameCity" : {5};
-        case "NameCityCapital" : {6};
+        case "Hill" : {10};
+        case "VegetationFir" : {10};
+        case "BorderCrossing" : {12};
+        case "NameLocal" : {12.5};
+        case "StrongpointArea" : {13};
+        case "NameVillage" : {13.5};
+        case "NameCity" : {15};
+        case "NameCityCapital" : {16};
         case "Airport" : {0};
         case "NameMarine" : {0};
         default {0};
