@@ -78,6 +78,7 @@ if (isServer) then {
 
     //DELAY
     btc_delay_fnc_createUnit = compileScript ["core\fnc\delay\createUnit.sqf"];
+    btc_delay_fnc_createUnitCiv = compileScript ["core\fnc\delay\createUnitCiv.sqf"];
     btc_delay_fnc_createVehicle = compileScript ["core\fnc\delay\createVehicle.sqf"];
     btc_delay_fnc_createAgent = compileScript ["core\fnc\delay\createAgent.sqf"];
     btc_delay_fnc_exec = compileScript ["core\fnc\delay\exec.sqf"];
