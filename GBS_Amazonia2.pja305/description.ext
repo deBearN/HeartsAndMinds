@@ -20,7 +20,64 @@ class RscTitles {
     #include "core\fnc\lift\rsc.hpp"
     #include "core\fnc\debug\dlg.hpp"
 };
+class CfgSounds
+{
+	class snake_hiss1
+	{
+		name="snake_hiss1";
+		sound[] = {sounds\snake_hiss1.ogg, 15, 1,200};
+		titles[] = {};
+	};
 
+	class snake_hiss2
+	{
+		name="snake_hiss2";
+		sound[] = {sounds\snake_hiss2.ogg, 15, 1,200};
+		titles[] = {};
+	};
+
+	class snake_hiss3
+	{
+		name="snake_hiss3";
+		sound[] = {sounds\snake_hiss3.ogg, 15, 1,200};
+		titles[] = {};
+	};
+
+	class snake_hiss4
+	{
+		name="snake_hiss4";
+		sound[] = {sounds\snake_hiss4.ogg, 15, 1,200};
+		titles[] = {};
+	};
+
+	class snake_hiss5
+	{
+		name="snake_hiss5";
+		sound[] = {sounds\snake_hiss5.ogg, 15, 1,200};
+		titles[] = {};
+	};
+
+	class snake_bite_scream1
+	{
+		name="snake_bite_scream1";
+		sound[] = {sounds\snake_bite_scream1.ogg, 10, 1,200};
+		titles[] = {};
+	};
+
+	class snake_bite_scream2
+	{
+		name="snake_bite_scream2";
+		sound[] = {sounds\snake_bite_scream2.ogg, 10, 1,200};
+		titles[] = {};
+	};
+
+	class snake_bite_rabbit
+	{
+		name="snake_bite_rabbit";
+		sound[] = {sounds\snake_bite_rabbit.ogg, 15, 1,200};
+		titles[] = {};
+	};
+};
 #include "core\def\param.hpp"
 
 #include "core\fnc\mil\aiskill.hpp"
