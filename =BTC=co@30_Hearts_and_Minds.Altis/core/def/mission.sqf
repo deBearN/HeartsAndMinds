@@ -203,11 +203,12 @@ if (isServer) then {
         ["Land_PlasticCase_01_small_black_CBRN_F", "Land_PlasticCase_01_small_olive_CBRN_F", "Land_PlasticCase_01_small_CBRN_F"]
     ];
     private _weapons_usefull = "true" configClasses (configFile >> "CfgWeapons") select {
-        getNumber (_x >> 'type') isEqualTo 1 &&
-        {getArray (_x >> 'magazines') isNotEqualTo []} &&
-        {getNumber (_x >> 'scope') isEqualTo 2}
-    };
-    btc_cache_weapons_type = _weapons_usefull apply {(toLower getText (_x >> "model")) select [1]};
+		getNumber (_x >> 'type') isEqualTo 1 &&
+		{getArray (_x >> 'magazines') isEqualTo ["braf_Lapa30Rnd_556x45","braf_Lapa30Rnd_556x45_red"]} &&
+		{getNumber (_x >> 'scope') isEqualTo 2}
+	};
+
+    btc_cache_weapons_type = _weapons_usefull apply {(getText (_x >> "model")) select [1]};
 
     //Hideout classname
     btc_type_campfire = ["MetalBarrel_burning_F"] + (_allClassSorted select {_x isKindOf "Land_Campfire_F"});
