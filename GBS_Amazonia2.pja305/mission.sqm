@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=1.5707964;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=33;
+	toggles=1569;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=5084;
+		nextID=5777;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1563;
+		nextID=1839;
 	};
 	class Camera
 	{
-		pos[]={10441.675,34.296387,12342.077};
-		dir[]={-0.067929223,-0.5651595,-0.82218021};
-		up[]={-0.046535388,0.82498163,-0.56324035};
-		aside[]={-0.9966042,3.7252903e-09,0.082340278};
+		pos[]={8743.4102,29.587204,12854.209};
+		dir[]={0.80480158,-0.29919243,0.51264209};
+		up[]={0.25235149,0.95419276,0.1607424};
+		aside[]={0.53725153,1.5518162e-07,-0.8434363};
 	};
 };
 binarizationWanted=0;
@@ -135,6 +135,7 @@ addons[]=
 	"A3_Props_F_Destroyer_Military_BriefingRoomScreen",
 	"Braf_Soft",
 	"BR_Skins_gripen",
+	"BR_Skins_c130m",
 	"BRAF_Insignia",
 	"A3_Characters_F",
 	"A3_Props_F_Orange_Furniture",
@@ -157,6 +158,8 @@ addons[]=
 	"A3_Modules_F_Multiplayer",
 	"ace_parachute",
 	"cTab",
+	"GBS_U_ACEX",
+	"GBS_U",
 	"ace_hearing",
 	"acre_sys_prc152",
 	"kat_breathing",
@@ -169,13 +172,13 @@ addons[]=
 	"Bro_Structures_WH2",
 	"A3_Structures_F_Households_House_Small03",
 	"A3_Soft_F_Enoch_Truck_01",
+	"BRAF_B_FA_VE",
+	"A3_Soft_F_Exp_Quadbike_01",
 	"BRAF_B_BRAF_Bluforce_REGULAR_2000",
 	"braf_weapons_pistols",
 	"ace_smallarms",
 	"ace_ballistics",
 	"braf_weapons_scopes",
-	"GBS_U_ACEX",
-	"GBS_U",
 	"GBS_V_ACEX",
 	"GBS_V",
 	"braf_weapons_sniper_rifles",
@@ -185,22 +188,19 @@ addons[]=
 	"A3_Weapons_F_Mark_Acc",
 	"GBS_FaceWear",
 	"ace_optics",
-	"ace_nightvision",
 	"A3_Structures_F_EPA_Civ_Camping",
 	"A3_Structures_F_Exp_Commercial_Addons",
 	"A3_Structures_F_Heli_Items_Sport",
 	"sss_transport",
 	"acre_sys_gsa",
 	"BRAF_B_FA",
-	"BRAF_B_FA_VE",
 	"sss_common",
 	"A3_Structures_F_Argo_Commercial_Accessories",
 	"braf_characters_binfa",
 	"sss_cas",
 	"A3_Props_F_Enoch_Civilian_InfoBoards",
 	"A3_Vegetation_F_Exp_expEden",
-	"Eden_Extended_Objects",
-	"A3_Vegetation_F_Vanila_expEden"
+	"Eden_Extended_Objects"
 };
 class AddonsMetaData
 {
@@ -684,319 +684,325 @@ class AddonsMetaData
 		};
 		class Item73
 		{
+			className="BR_Skins_c130m";
+			name="BR_Skins_c130m";
+			author="JPJ59 / Paulo Victor";
+		};
+		class Item74
+		{
 			className="BRAF_Insignia";
 			name="BRAF_Insignia";
 			author="BRAF Team";
 		};
-		class Item74
+		class Item75
 		{
 			className="CUP_CAStructures_E_Misc_Misc_Interier";
 			name="CUP_CAStructures_E_Misc_Misc_Interier";
 		};
-		class Item75
+		class Item76
 		{
 			className="A3_Structures_F_Enoch_Infrastructure";
 			name="Arma 3 Contact Platform - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item76
+		class Item77
 		{
 			className="kat_pharma";
 			name="KAT - KAT - Pharma";
 			author="Katalam";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item77
+		class Item78
 		{
 			className="A3_Props_F_Exp_A";
 			name="Arma 3 Nexus Update - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item78
+		class Item79
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item79
+		class Item80
 		{
 			className="A3_Structures_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item80
+		class Item81
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item81
+		class Item82
 		{
 			className="A3_Weapons_F_expEden";
 			name="O&T Expansion Eden - Weapons and Accessories";
 			author="Trager";
 			url="https://steamcommunity.com/workshop/filedetails/?id=1923321700";
 		};
-		class Item82
+		class Item83
 		{
 			className="A3_Weapons_F_Orange";
 			name="Arma 3 Orange - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item83
+		class Item84
 		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item84
+		class Item85
 		{
 			className="cTab";
 			name="cTab";
 			author="cTab";
 		};
-		class Item85
+		class Item86
+		{
+			className="GBS_U_ACEX";
+			name="GBS_U_ACEX";
+		};
+		class Item87
+		{
+			className="GBS_U";
+			name="GBS Uniforms";
+			author="P. Siqueira";
+		};
+		class Item88
 		{
 			className="ace_hearing";
 			name="ACE3 - Hearing";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item86
+		class Item89
 		{
 			className="acre_sys_prc152";
 			name="ACRE2 - AN/PRC-152";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
-		class Item87
+		class Item90
 		{
 			className="kat_breathing";
 			name="KAT - KAT - Breathing";
 			author="Katalam";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item88
+		class Item91
 		{
 			className="kat_airway";
 			name="KAT - KAT - Airway";
 			author="Katalam";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item89
+		class Item92
 		{
 			className="cfp_uniforms";
 			name="cfp_uniforms";
 			author="CFP Team";
 		};
-		class Item90
+		class Item93
 		{
 			className="braf_characters_aviation";
 			name="braf_characters_aviation";
 			author="BRAF Team";
 		};
-		class Item91
+		class Item94
 		{
 			className="BRAF_characters_headgear";
 			name="BRAF_characters_headgear";
 			author="BRAF Team";
 		};
-		class Item92
+		class Item95
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item93
+		class Item96
 		{
 			className="A3_Soft_F_Enoch";
 			name="Arma 3 Contact Platform - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item94
+		class Item97
+		{
+			className="BRAF_B_FA_VE";
+			name="BRAF_B_FA_VE";
+		};
+		class Item98
+		{
+			className="A3_Soft_F_Exp";
+			name="Arma 3 Apex - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item99
 		{
 			className="BRAF_B_BRAF_Bluforce_REGULAR_2000";
 			name="BRAF_B_BRAF_Bluforce_REGULAR_2000";
 		};
-		class Item95
+		class Item100
 		{
 			className="braf_weapons_pistols";
 			name="braf_weapons_pistols";
 			author="BRAF Team";
 		};
-		class Item96
+		class Item101
 		{
 			className="ace_smallarms";
 			name="ACE3 - Small Arms";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item97
+		class Item102
 		{
 			className="ace_ballistics";
 			name="ACE3 - Ballistics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item98
+		class Item103
 		{
 			className="braf_weapons_scopes";
 			name="braf_weapons_scopes";
 			author="BRAF Team";
 		};
-		class Item99
-		{
-			className="GBS_U_ACEX";
-			name="GBS_U_ACEX";
-		};
-		class Item100
-		{
-			className="GBS_U";
-			name="GBS Uniforms";
-			author="P. Siqueira";
-		};
-		class Item101
+		class Item104
 		{
 			className="GBS_V_ACEX";
 			name="GBS_V_ACEX";
 		};
-		class Item102
+		class Item105
 		{
 			className="GBS_V";
 			name="GBS Coletes";
 			author="P. Siqueira";
 		};
-		class Item103
+		class Item106
 		{
 			className="braf_weapons_sniper_rifles";
 			name="braf_weapons_sniper_rifles";
 			author="BRAF Team";
 		};
-		class Item104
+		class Item107
 		{
 			className="gbs_w_acessories";
 			name="gbs_w_acessories";
 			author="P. Siqueira";
 		};
-		class Item105
+		class Item108
 		{
 			className="BRAF_B_BRAF_Bluforce_commando_2000";
 			name="BRAF_B_BRAF_Bluforce_commando_2000";
 		};
-		class Item106
+		class Item109
 		{
 			className="braf_weapons_muzzle";
 			name="braf_weapons_muzzle";
 			author="BRAF Team";
 			url="https://www.brafmod.com.br";
 		};
-		class Item107
+		class Item110
 		{
 			className="A3_Weapons_F_Mark";
 			name="Arma 3 Marksmen - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item108
+		class Item111
 		{
 			className="GBS_FaceWear";
 			name="GBS Mascaras";
 			author="P. Siqueira";
 		};
-		class Item109
+		class Item112
 		{
 			className="ace_optics";
 			name="ACE3 - Optics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item110
-		{
-			className="ace_nightvision";
-			name="ACE3 - Night Vision";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item111
+		class Item113
 		{
 			className="A3_Structures_F_Exp_Commercial";
 			name="Arma 3 Apex - Commercial Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item112
+		class Item114
 		{
 			className="sss_transport";
 			name="transport";
 			author="Simplex Team";
 			url="https://github.com/SceptreOfficial/Simplex-Support-Services";
 		};
-		class Item113
+		class Item115
 		{
 			className="acre_sys_gsa";
 			name="ACRE2 - Ground Spike Antenna";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
-		class Item114
+		class Item116
 		{
 			className="BRAF_B_FA";
 			name="BRAF_B_FA";
 		};
-		class Item115
-		{
-			className="BRAF_B_FA_VE";
-			name="BRAF_B_FA_VE";
-		};
-		class Item116
+		class Item117
 		{
 			className="sss_common";
 			name="common";
 			author="Simplex Team";
 			url="https://github.com/SceptreOfficial/Simplex-Support-Services";
 		};
-		class Item117
+		class Item118
 		{
 			className="braf_characters_binfa";
 			name="braf_characters_binfa";
 			author="BRAF Team";
 		};
-		class Item118
+		class Item119
 		{
 			className="sss_cas";
 			name="cas";
 			author="Simplex Team";
 			url="https://github.com/SceptreOfficial/Simplex-Support-Services";
 		};
-		class Item119
+		class Item120
 		{
 			className="A3_Vegetation_F_Exp_expEden";
 			name="O&T Expansion Eden - Apex Flora";
 			author="Trager";
 			url="https://steamcommunity.com/workshop/filedetails/?id=1923321700";
 		};
-		class Item120
+		class Item121
 		{
 			className="Eden_Extended_Objects";
 			name="Eden Extended Objects";
 			author="_SCAR";
 		};
-		class Item121
-		{
-			className="A3_Vegetation_F_Vanila_expEden";
-			name="O&T Expansion Eden - Flora";
-			author="Trager";
-			url="https://steamcommunity.com/workshop/filedetails/?id=1923321700";
-		};
+	};
+};
+class DynamicSimulation
+{
+	class EnableRadiuses
+	{
+		Group=1350;
 	};
 };
 dlcs[]=
@@ -1027,6 +1033,7 @@ class ScenarioData
 		gameType="Coop";
 		maxPlayers=55;
 	};
+	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes
 {
@@ -1084,54 +1091,6 @@ class CustomAttributes
 	{
 		name="Scenario";
 		class Attribute0
-		{
-			property="ENH_mapIndicators";
-			expression="if (!is3DEN && (_value isNotEqualTo [false, false, false, false]) && hasInterface) then {disableMapIndicators _value}";
-			class Value
-			{
-				class data
-				{
-					singleType="ARRAY";
-					class value
-					{
-						items=4;
-						class Item0
-						{
-							class data
-							{
-								singleType="BOOL";
-								value=1;
-							};
-						};
-						class Item1
-						{
-							class data
-							{
-								singleType="BOOL";
-								value=1;
-							};
-						};
-						class Item2
-						{
-							class data
-							{
-								singleType="BOOL";
-								value=1;
-							};
-						};
-						class Item3
-						{
-							class data
-							{
-								singleType="BOOL";
-								value=1;
-							};
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
 		{
 			property="mts_zeus_3denComments";
 			expression="false";
@@ -1987,7 +1946,68 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		class Attribute1
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="ENH_mapIndicators";
+			expression="if (!is3DEN && (_value isNotEqualTo [false, false, false, false]) && hasInterface) then {disableMapIndicators _value}";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=4;
+						class Item0
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=1;
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=1;
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=1;
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=1;
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=3;
 	};
 };
 class Mission
@@ -1995,6 +2015,7 @@ class Mission
 	class Intel
 	{
 		resistanceWest=0;
+		resistanceEast=1;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;
@@ -2012,17 +2033,35 @@ class Mission
 		minute=-7;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
+		class CustomAttributes
+		{
+			name="Intel";
+			class Attribute0
+			{
+				property="ENH_terrainDetail";
+				expression="if (!is3DEN && _value > 0 && hasInterface) then {setTerrainGrid _value}";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=3.125;
+					};
+				};
+			};
+			nAttributes=1;
+		};
 	};
 	class Entities
 	{
-		items=246;
+		items=247;
 		class Item0
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
 				position[]={8742.0986,27.333336,12869.009};
-				angles[]={-0,3.420723,0};
+				angles[]={0,3.420723,0};
 			};
 			areaSize[]={95.072998,0,68.359001};
 			areaIsRectangle=1;
@@ -2459,7 +2498,7 @@ class Mission
 			};
 			id=1267;
 			type="ACE_bananaItem";
-			atlOffset=0.086471558;
+			atlOffset=-0.44627762;
 		};
 		class Item20
 		{
@@ -11981,7 +12020,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={8709.9346,27.333336,12861.894};
+												position[]={8709.9199,27.333336,12861.852};
 												angles[]={0,1.3113417e-07,0};
 											};
 											side="Empty";
@@ -35201,7 +35240,20 @@ class Mission
 												};
 											};
 										};
-										nAttributes=3;
+										class Attribute3
+										{
+											property="Wardrobe_outfitObject";
+											expression="if (!is3DEN && _value) then {[_this] spawn J3FF_Wardrobe_fnc_defineAvailableItems}";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item2
@@ -35728,13 +35780,14 @@ class Mission
 										angles[]={3.141593,2.6179957,2.5018494e-06};
 									};
 									side="Empty";
+									flags=4;
 									class Attributes
 									{
 										disableSimulation=1;
 									};
 									id=1230;
 									type="ACE_painkillersItem";
-									atlOffset=0.37428474;
+									atlOffset=-0.15937042;
 								};
 								class Item33
 								{
@@ -35752,7 +35805,7 @@ class Mission
 									};
 									id=1221;
 									type="Land_PortableLongRangeRadio_F";
-									atlOffset=1.003336;
+									atlOffset=0.98791122;
 								};
 								class Item34
 								{
@@ -35982,11 +36035,11 @@ class Mission
 								};
 							};
 							id=1266;
-							atlOffset=0.23977089;
+							atlOffset=0.23974991;
 						};
 					};
 					id=606;
-					atlOffset=0.23977089;
+					atlOffset=0.23974991;
 				};
 				class Item3
 				{
@@ -38411,7 +38464,7 @@ class Mission
 					name="btc_vehicles";
 					class Entities
 					{
-						items=40;
+						items=42;
 						class Item0
 						{
 							dataType="Object";
@@ -39333,9 +39386,47 @@ class Mission
 							type="braf_B_A29A";
 							atlOffset=2.0980835e-05;
 						};
+						class Item40
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13103.631,15.187101,855.91095};
+								angles[]={0,3.141593,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
+							};
+							id=5757;
+							type="BRskins_c130m_transport";
+						};
+						class Item41
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13056.088,15.187101,855.16052};
+								angles[]={0,3.141593,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
+							};
+							id=5758;
+							type="BRskins_c130m_cargo";
+						};
 					};
 					id=227;
-					atlOffset=0.061341286;
+					atlOffset=0.015335083;
 				};
 				class Item5
 				{
@@ -39478,7 +39569,6 @@ class Mission
 							};
 							id=616;
 							type="Land_Tablet_02_black_F";
-							atlOffset=0.033527374;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -39512,7 +39602,6 @@ class Mission
 						};
 					};
 					id=615;
-					atlOffset=0.033527374;
 				};
 				class Item8
 				{
@@ -39843,7 +39932,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={8713.084,31.565819,12850.622};
+								position[]={8713.6455,31.565819,12855.048};
 								angles[]={0,6.0797134e-07,0};
 							};
 							side="Empty";
@@ -41191,7 +41280,7 @@ class Mission
 											};
 											id=925;
 											type="Land_Tablet_02_F";
-											atlOffset=0.11559296;
+											atlOffset=0.082065582;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -41432,11 +41521,11 @@ class Mission
 										};
 									};
 									id=906;
-									atlOffset=0.19533348;
+									atlOffset=0.19532585;
 								};
 							};
 							id=938;
-							atlOffset=0.19533348;
+							atlOffset=0.19532585;
 						};
 						class Item2
 						{
@@ -44356,7 +44445,6 @@ class Mission
 								angles[]={0,2.0943952,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 								createAsSimpleObject=1;
@@ -44364,6 +44452,7 @@ class Mission
 							};
 							id=654;
 							type="Land_Tablet_01_F";
+							atlOffset=0.84056473;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -44715,6 +44804,7 @@ class Mission
 								angles[]={0,4.4505897,0};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								createAsSimpleObject=1;
@@ -44722,7 +44812,6 @@ class Mission
 							};
 							id=675;
 							type="Land_MobilePhone_smart_ArmaMobileOps_F";
-							atlOffset=0.84469032;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -45014,7 +45103,7 @@ class Mission
 											name="Spawn GBS_2";
 											class Entities
 											{
-												items=5;
+												items=6;
 												class Item0
 												{
 													dataType="Logic";
@@ -45123,11 +45212,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -45145,40 +45234,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -45250,6 +45334,19 @@ class Mission
 																};
 																class Attribute4
 																{
+																	property="aceax_textureOptions";
+																	expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
+																	class Value
+																	{
+																		class data
+																		{
+																			singleType="STRING";
+																			value="[[""Camisa_GBS_watch"",""""],[""Camisa_GBS_boot"",""""]]";
+																		};
+																	};
+																};
+																class Attribute5
+																{
 																	property="ENH_unitTraits_medic";
 																	expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
 																	class Value
@@ -45261,7 +45358,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute5
+																class Attribute6
 																{
 																	property="speaker";
 																	expression="_this setspeaker _value;";
@@ -45274,7 +45371,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute6
+																class Attribute7
 																{
 																	property="ENH_unitTrait_UAVHacker";
 																	expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
@@ -45287,7 +45384,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute7
+																class Attribute8
 																{
 																	property="ENH_unitTraits_loadCoef";
 																	expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
@@ -45300,7 +45397,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute8
+																class Attribute9
 																{
 																	property="brevet1";
 																	expression="[_this,_value] call BRAF_fnc_setbrevetonuniform";
@@ -45313,7 +45410,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute9
+																class Attribute10
 																{
 																	property="ace_isMedic";
 																	expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -45326,7 +45423,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute10
+																class Attribute11
 																{
 																	property="shoulder_insignia";
 																	expression="[_this,_value] call BRAF_fnc_settabonuniform";
@@ -45339,7 +45436,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute11
+																class Attribute12
 																{
 																	property="threshold";
 																	expression="if (_value >= 0.1) then {_this setVariable [""ace_medical_damageThreshold"", _value, true]}";
@@ -45352,7 +45449,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute12
+																class Attribute13
 																{
 																	property="branch_insignia";
 																	expression="[_this,_value] call BRAF_fnc_setbranchonuniform";
@@ -45365,7 +45462,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute13
+																class Attribute14
 																{
 																	property="pitch";
 																	expression="_this setpitch _value;";
@@ -45378,7 +45475,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute14
+																class Attribute15
 																{
 																	property="ENH_unitTraits_camouflage";
 																	expression="[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]";
@@ -45391,7 +45488,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute15
+																class Attribute16
 																{
 																	property="rank_insignia";
 																	expression="[_this,_value] call BRAF_fnc_setrankonuniform";
@@ -45404,7 +45501,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute16
+																class Attribute17
 																{
 																	property="ENH_featureTypeNew";
 																	expression="[_this, _value] remoteExec ['setFeatureType', 0, _this]";
@@ -45417,7 +45514,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute17
+																class Attribute18
 																{
 																	property="ENH_unitTrait_explosiveSpecialist";
 																	expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
@@ -45430,7 +45527,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute18
+																class Attribute19
 																{
 																	property="ace_isEngineer";
 																	expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
@@ -45443,7 +45540,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute19
+																class Attribute20
 																{
 																	property="ENH_disableAI_move";
 																	expression="if _value then {[_this, 'MOVE'] remoteExec ['disableAI', _this]}";
@@ -45456,7 +45553,7 @@ class Mission
 																		};
 																	};
 																};
-																nAttributes=20;
+																nAttributes=21;
 															};
 														};
 														class Item1
@@ -45478,11 +45575,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -45500,40 +45597,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -45846,11 +45938,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -45868,40 +45960,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -46214,11 +46301,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -46236,40 +46323,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -46582,11 +46664,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -46604,40 +46686,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -46950,11 +47027,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -46972,40 +47049,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -47332,11 +47404,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -47354,40 +47426,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -47466,7 +47533,7 @@ class Mission
 																		class data
 																		{
 																			singleType="STRING";
-																			value="[[""braf_bdu_cor_luva"",""""],[""braf_bdu_boot"",""Bege""],[""braf_bdu_rank"",""""],[""braf_bdu_branch"",""""],[""braf_bdu_brevet"",""""],[""braf_bdu_shoulder"",""""]]";
+																			value="[[""Camisa_GBS_watch"",""""],[""Camisa_GBS_boot"",""""]]";
 																		};
 																	};
 																};
@@ -47687,11 +47754,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -47709,40 +47776,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -47847,11 +47909,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -47869,40 +47931,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -48007,11 +48064,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -48029,40 +48086,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -48168,11 +48220,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -48190,40 +48242,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -48380,11 +48427,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -48402,40 +48449,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -48554,11 +48596,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -48576,40 +48618,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -48909,11 +48946,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -48931,40 +48968,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -49069,11 +49101,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -49091,40 +49123,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -49281,11 +49308,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -49303,40 +49330,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -49493,11 +49515,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -49515,40 +49537,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -49653,11 +49670,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -49675,40 +49692,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -49894,16 +49906,10 @@ class Mission
 																		typeName="braf_characters_air_force_flightsuit";
 																		isBackpack=0;
 																	};
-																	class vest
-																	{
-																		typeName="braf_heli_flightvest";
-																		isBackpack=0;
-																	};
 																	map="ItemMap";
 																	compass="ItemCompass";
 																	watch="ACE_Altimeter";
 																	gps="ItemAndroid";
-																	headgear="BRAF_HGU56P_Crew_3BAvEx";
 																};
 															};
 															id=259;
@@ -49962,16 +49968,10 @@ class Mission
 																		typeName="braf_characters_air_force_flightsuit";
 																		isBackpack=0;
 																	};
-																	class vest
-																	{
-																		typeName="braf_heli_flightvest";
-																		isBackpack=0;
-																	};
 																	map="ItemMap";
 																	compass="ItemCompass";
 																	watch="ACE_Altimeter";
 																	gps="ItemAndroid";
-																	headgear="BRAF_HGU56P_Crew_3BAvEx";
 																};
 															};
 															id=260;
@@ -50013,8 +50013,8 @@ class Mission
 															dataType="Object";
 															class PositionInfo
 															{
-																position[]={8748.1719,27.334778,12868.396};
-																angles[]={0,4.6759281,0};
+																position[]={8748.1719,27.334774,12868.396};
+																angles[]={0,4.6759291,0};
 															};
 															side="West";
 															flags=5;
@@ -50030,21 +50030,14 @@ class Mission
 																		typeName="braf_characters_air_force_flightsuit";
 																		isBackpack=0;
 																	};
-																	class vest
-																	{
-																		typeName="braf_heli_flightvest";
-																		isBackpack=0;
-																	};
 																	map="ItemMap";
 																	compass="ItemCompass";
 																	watch="ACE_Altimeter";
 																	gps="ItemAndroid";
-																	headgear="BRAF_HGU56P_Crew_3BAvEx";
 																};
 															};
 															id=261;
 															type="B_Helipilot_F";
-															atlOffset=3.8146973e-06;
 															class CustomAttributes
 															{
 																class Attribute0
@@ -50073,7 +50066,46 @@ class Mission
 																		};
 																	};
 																};
-																nAttributes=2;
+																class Attribute2
+																{
+																	property="speaker";
+																	expression="_this setspeaker _value;";
+																	class Value
+																	{
+																		class data
+																		{
+																			singleType="STRING";
+																			value="Male07ENG";
+																		};
+																	};
+																};
+																class Attribute3
+																{
+																	property="pitch";
+																	expression="_this setpitch _value;";
+																	class Value
+																	{
+																		class data
+																		{
+																			singleType="SCALAR";
+																			value=1;
+																		};
+																	};
+																};
+																class Attribute4
+																{
+																	property="face";
+																	expression="_this setface _value;";
+																	class Value
+																	{
+																		class data
+																		{
+																			singleType="STRING";
+																			value="GBS_Siqueira";
+																		};
+																	};
+																};
+																nAttributes=5;
 															};
 														};
 														class Item3
@@ -50098,16 +50130,10 @@ class Mission
 																		typeName="braf_characters_air_force_flightsuit";
 																		isBackpack=0;
 																	};
-																	class vest
-																	{
-																		typeName="braf_heli_flightvest";
-																		isBackpack=0;
-																	};
 																	map="ItemMap";
 																	compass="ItemCompass";
 																	watch="ACE_Altimeter";
 																	gps="ItemAndroid";
-																	headgear="BRAF_HGU56P_Crew_3BAvEx";
 																};
 															};
 															id=262;
@@ -50177,11 +50203,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -50199,40 +50225,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -50390,11 +50411,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -50412,40 +50433,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -50603,11 +50619,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -50625,40 +50641,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -50764,11 +50775,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -50786,40 +50797,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -50977,11 +50983,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -50999,40 +51005,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -51138,11 +51139,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -51160,40 +51161,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -51286,7 +51282,7 @@ class Mission
 																		class data
 																		{
 																			singleType="STRING";
-																			value="[[""braf_bdu_cor_luva"",""""],[""braf_bdu_boot"",""Bege""],[""braf_bdu_rank"",""""],[""braf_bdu_branch"",""""],[""braf_bdu_brevet"",""""],[""braf_bdu_shoulder"",""""]]";
+																			value="[[""Camisa_GBS_watch"",""""],[""Camisa_GBS_boot"",""Bege""]]";
 																		};
 																	};
 																};
@@ -51351,11 +51347,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -51373,40 +51369,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -51512,11 +51503,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -51534,40 +51525,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -51673,11 +51659,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -51695,40 +51681,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -51834,11 +51815,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -51856,40 +51837,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -51995,11 +51971,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -52017,40 +51993,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -52208,11 +52179,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -52230,40 +52201,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -52369,11 +52335,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -52391,40 +52357,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -52582,11 +52543,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -52604,40 +52565,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -52795,11 +52751,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -52817,40 +52773,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -52956,11 +52907,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -52978,40 +52929,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -53169,11 +53115,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -53191,40 +53137,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -53330,11 +53271,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -53352,40 +53293,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -53478,11 +53414,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -53500,40 +53436,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -53639,11 +53570,11 @@ class Mission
 																{
 																	class uniform
 																	{
-																		typeName="braf_army_airborne_uniform";
+																		typeName="TSHIRT_BDU_B";
 																		isBackpack=0;
 																		class ItemCargo
 																		{
-																			items=11;
+																			items=10;
 																			class Item0
 																			{
 																				name="ACE_EarPlugs";
@@ -53661,40 +53592,35 @@ class Mission
 																			};
 																			class Item3
 																			{
-																				name="kat_PainkillerItem";
-																				count=1;
-																			};
-																			class Item4
-																			{
 																				name="ACE_splint";
 																				count=2;
 																			};
-																			class Item5
+																			class Item4
 																			{
 																				name="ACE_tourniquet";
 																				count=2;
 																			};
-																			class Item6
+																			class Item5
 																			{
 																				name="kat_IO_FAST";
 																				count=1;
 																			};
-																			class Item7
+																			class Item6
 																			{
 																				name="kat_IV_16";
 																				count=2;
 																			};
-																			class Item8
+																			class Item7
 																			{
 																				name="ACE_salineIV_500";
 																				count=2;
 																			};
-																			class Item9
+																			class Item8
 																			{
 																				name="kat_aatKit";
 																				count=1;
 																			};
-																			class Item10
+																			class Item9
 																			{
 																				name="kat_accuvac";
 																				count=1;
@@ -53788,13 +53714,93 @@ class Mission
 													id=263;
 													atlOffset=3.8146973e-06;
 												};
+												class Item5
+												{
+													dataType="Logic";
+													class PositionInfo
+													{
+														position[]={8745.2236,27.333336,12861.307};
+														angles[]={0,3.0984657,0};
+													};
+													id=5735;
+													type="ModuleRespawnPosition_F";
+													class CustomAttributes
+													{
+														class Attribute0
+														{
+															property="ModuleRespawnPosition_F_Marker";
+															expression="_this setVariable ['Marker',_value,true];";
+															class Value
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="2";
+																};
+															};
+														};
+														class Attribute1
+														{
+															property="ModuleRespawnPosition_F_Name";
+															expression="_this setVariable ['Name',_value,true];";
+															class Value
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="Base";
+																};
+															};
+														};
+														class Attribute2
+														{
+															property="ModuleRespawnPosition_F_Side";
+															expression="_this setVariable ['Side',_value,true];";
+															class Value
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="3";
+																};
+															};
+														};
+														class Attribute3
+														{
+															property="ModuleRespawnPosition_F_ShowNotification";
+															expression="_this setVariable ['ShowNotification',_value,true];";
+															class Value
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="0";
+																};
+															};
+														};
+														class Attribute4
+														{
+															property="ModuleRespawnPosition_F_Type";
+															expression="_this setVariable ['Type',_value,true];";
+															class Value
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="0";
+																};
+															};
+														};
+														nAttributes=5;
+													};
+												};
 											};
 											id=236;
-											atlOffset=3.8146973e-06;
+											atlOffset=1.9073486e-06;
 										};
 									};
 									id=235;
-									atlOffset=3.8146973e-06;
+									atlOffset=1.9073486e-06;
 								};
 								class Item1
 								{
@@ -54389,7 +54395,7 @@ class Mission
 					name="btc_veh_respawnable";
 					class Entities
 					{
-						items=3;
+						items=19;
 						class Item0
 						{
 							dataType="Layer";
@@ -54409,7 +54415,6 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								disableSimulation=1;
 							};
 							id=3643;
 							type="B_T_Truck_01_flatbed_F";
@@ -54443,7 +54448,6 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								disableSimulation=1;
 							};
 							id=3644;
 							type="B_T_Truck_01_flatbed_F";
@@ -54466,9 +54470,262 @@ class Mission
 								nAttributes=1;
 							};
 						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13803.541,11.0679,851.2879};
+								angles[]={0,6.283185,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5747;
+							type="BRAF_B_AM21_FAB";
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13809.541,11.0679,851.2879};
+								angles[]={0,6.283185,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5748;
+							type="BRAF_B_AM21_FAB";
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13780.127,10.968438,860.46948};
+								angles[]={0,1.5707963,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5739;
+							type="B_T_Quadbike_01_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13780.127,10.968438,858.46948};
+								angles[]={0,1.5707963,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5740;
+							type="B_T_Quadbike_01_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13780.127,10.968438,856.46948};
+								angles[]={0,1.5707963,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5741;
+							type="B_T_Quadbike_01_F";
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13780.127,10.968438,854.46948};
+								angles[]={0,1.5707963,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5742;
+							type="B_T_Quadbike_01_F";
+						};
+						class Item9
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13780.127,10.968438,852.46948};
+								angles[]={0,1.5707963,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5743;
+							type="B_T_Quadbike_01_F";
+						};
+						class Item10
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13780.127,10.968438,850.46948};
+								angles[]={0,1.5707963,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5744;
+							type="B_T_Quadbike_01_F";
+						};
+						class Item11
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13780.127,10.968438,848.46948};
+								angles[]={0,1.5707963,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5745;
+							type="B_T_Quadbike_01_F";
+						};
+						class Item12
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13791.913,9.3832293,888.83606};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5765;
+							type="BRAF_B_Worker_Cargo_FAB";
+						};
+						class Item13
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13783.913,9.3832293,888.83606};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5763;
+							type="BRAF_B_Worker_Repair_FAB";
+						};
+						class Item14
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13779.913,9.3832293,888.83606};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5762;
+							type="BRAF_B_Worker_FAB";
+						};
+						class Item15
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13800.511,9.4171648,887.59351};
+								angles[]={0,3.141593,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5759;
+							type="BRAF_B_Worker_Fuel_FAB";
+						};
+						class Item16
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13804.511,9.4171648,887.59351};
+								angles[]={0,3.141593,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5760;
+							type="BRAF_B_Worker_Fuel_FAB";
+						};
+						class Item17
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13808.511,9.4171648,887.59351};
+								angles[]={0,3.141593,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5761;
+							type="BRAF_B_Worker_Fuel_FAB";
+						};
+						class Item18
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13797.541,11.0679,851.2879};
+								angles[]={0,1.5099579e-07,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5746;
+							type="BRAF_B_AM21_FAB";
+						};
 					};
 					id=1831;
-					atlOffset=-32.898911;
+					atlOffset=0.00016975403;
 				};
 				class Item17
 				{
@@ -56151,16 +56408,16 @@ class Mission
 										{
 											class primaryWeapon
 											{
-												name="braf_msr_338";
+												name="Braf_msr_308";
 												optics="GBS_Optics_25x_PMII_MSR_D";
 												muzzle="braf_msr_silencer";
 												flashlight="GBS_MSR_Ghillie_4";
 												underBarrel="bipod_02_F_tan";
-												firemode="braf_msr_338:Single";
+												firemode="Braf_msr_308:Single";
 												class primaryMuzzleMag
 												{
-													name="braf_msr_5Rnd_338_red";
-													ammoLeft=5;
+													name="braf_msr_10Rnd_308";
+													ammoLeft=10;
 												};
 											};
 											class uniform
@@ -56481,7 +56738,7 @@ class Mission
 											watch="ItemWatch";
 											radio="ItemRadio";
 											gps="ItemGPS";
-											headgear="gbs_curso_V04";
+											headgear="gbs_curso_04";
 										};
 									};
 									id=975;
@@ -57506,11 +57763,11 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8768.4512,30.623774,12856.482};
+										position[]={8768.4795,30.636774,12856.51};
 										angles[]={0,1.5707965,0};
 									};
 									side="West";
-									flags=1;
+									flags=5;
 									class Attributes
 									{
 										class Inventory
@@ -57539,7 +57796,6 @@ class Mission
 									};
 									id=985;
 									type="Braf_B_army_unarmed_regular_2020";
-									atlOffset=3.1870003;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -59048,17 +59304,10 @@ class Mission
 													};
 												};
 											};
-											class vest
-											{
-												typeName="braf_heli_flightvest";
-												isBackpack=0;
-											};
 											map="ItemMap";
 											compass="ItemCompass";
 											watch="ItemWatch";
 											radio="ItemRadio";
-											hmd="NVGoggles_OPFOR";
-											headgear="BRAF_HGU56P_3BAvEx";
 										};
 									};
 									id=4001;
@@ -59267,17 +59516,10 @@ class Mission
 													};
 												};
 											};
-											class vest
-											{
-												typeName="braf_heli_flightvest";
-												isBackpack=0;
-											};
 											map="ItemMap";
 											compass="ItemCompass";
 											watch="ItemWatch";
 											radio="ItemRadio";
-											hmd="NVGoggles_OPFOR";
-											headgear="BRAF_HGU56P_3BAvEx";
 										};
 									};
 									id=4003;
@@ -61376,7 +61618,6 @@ class Mission
 									};
 									id=2446;
 									type="Land_Tablet_02_F";
-									atlOffset=0.033527374;
 								};
 								class Item106
 								{
@@ -63824,7 +64065,6 @@ class Mission
 									};
 									id=2608;
 									type="Land_Tablet_02_F";
-									atlOffset=0.033527374;
 								};
 								class Item2
 								{
@@ -66369,7 +66609,7 @@ class Mission
 				};
 			};
 			id=3896;
-			atlOffset=1.1153259;
+			atlOffset=-2.1412487;
 		};
 		class Item148
 		{
@@ -69595,7 +69835,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="braf_B_A29B";
+							value="braf_B_A29A";
 						};
 					};
 				};
@@ -70403,7 +70643,7 @@ class Mission
 		class Item201
 		{
 			dataType="Trigger";
-			position[]={8732.9082,27.303379,12812.32};
+			position[]={8732.9082,26.419994,12812.32};
 			class Attributes
 			{
 				text="Gate 4 Trigger";
@@ -70412,7 +70652,7 @@ class Mission
 				onDeactivation="call{gate_4 animate [""Door_1_Move"", 0]}";
 				sizeA=2.1232734;
 				sizeB=12.89;
-				sizeC=4;
+				sizeC=3.1166162;
 				repeatable=1;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
@@ -70420,7 +70660,7 @@ class Mission
 			};
 			id=4651;
 			type="EmptyDetectorArea10x10";
-			atlOffset=-0.0051498413;
+			atlOffset=-0.88853455;
 		};
 		class Item202
 		{
@@ -72524,48 +72764,417 @@ class Mission
 		};
 		class Item243
 		{
-			dataType="Object";
+			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8707.0762,27.649952,12883.031};
+				position[]={13813.234,9.3421516,869.48248};
 			};
-			side="Empty";
-			flags=4;
-			class Attributes
+			areaSize[]={1,-1,1};
+			id=5749;
+			type="ModuleEditTerrainObject_F";
+			class CustomAttributes
 			{
+				class Attribute0
+				{
+					property="#name";
+					expression="_this setVariable [""#name"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="#initServer";
+					expression="_this setVariable [""#initServer"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="#state";
+					expression="_this setVariable [""#state"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=5;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="#allowDamage";
+					expression="_this setVariable [""#allowDamage"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="#doorStates";
+					expression="_this setVariable [""#doorStates"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=3;
+								class Item0
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="#init";
+					expression="_this setVariable [""#init"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=7;
 			};
-			id=4876;
-			type="c_grassgreen_groupsoft";
 		};
 		class Item244
 		{
-			dataType="Object";
+			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8712.1357,27.635437,12877.43};
+				position[]={13813.297,9.3421516,873.64264};
 			};
-			side="Empty";
-			flags=4;
-			class Attributes
+			areaSize[]={1,-1,1};
+			id=5751;
+			type="ModuleEditTerrainObject_F";
+			class CustomAttributes
 			{
+				class Attribute0
+				{
+					property="#name";
+					expression="_this setVariable [""#name"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="#initServer";
+					expression="_this setVariable [""#initServer"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="#state";
+					expression="_this setVariable [""#state"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=5;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="#allowDamage";
+					expression="_this setVariable [""#allowDamage"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="#doorStates";
+					expression="_this setVariable [""#doorStates"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=3;
+								class Item0
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="#init";
+					expression="_this setVariable [""#init"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=7;
 			};
-			id=4891;
-			type="c_strgrassdry_group";
 		};
 		class Item245
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={13813.313,9.3421516,867.66315};
+			};
+			areaSize[]={1,-1,1};
+			id=5753;
+			type="ModuleEditTerrainObject_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#name";
+					expression="_this setVariable [""#name"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="#initServer";
+					expression="_this setVariable [""#initServer"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="#state";
+					expression="_this setVariable [""#state"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=5;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="#allowDamage";
+					expression="_this setVariable [""#allowDamage"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="#doorStates";
+					expression="_this setVariable [""#doorStates"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=3;
+								class Item0
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="#init";
+					expression="_this setVariable [""#init"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=7;
+			};
+		};
+		class Item246
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8707.0586,26.934206,12878.758};
+				position[]={13787.765,9.3832293,888.9162};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=4892;
-			type="c_strgrassgreen_group";
+			id=5768;
+			type="BRAF_B_Worker_Ammo";
 		};
 	};
 	class Connections
