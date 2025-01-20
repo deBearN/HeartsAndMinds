@@ -695,7 +695,7 @@ btc_lift_HUD_y  = 0.848;
 btc_hq = objNull;
 // Get all faction from mod there are currently running
 //copyToClipboard str (["EN"] call btc_fnc_get_class);
-private _allfaction = ["CFP_I_WESTULTRA"]; //All factions
+private _allfaction = ["BRAF_Thugs"]; //All factions
 _p_en = _allfaction select _p_en; //Select faction selected from mission parameter
 _allclasse = [[_p_en], _p_en_AA, _p_en_tank] call btc_mil_fnc_class; //Create classes from factions, you can combine factions like that: [[_p_en , "IND_F"], _p_en_AA, _p_en_tank] call btc_mil_fnc_class;
 
@@ -860,7 +860,7 @@ switch (_p_en) do {
             "GBSVTR_AMBULANCIA_MEDICO"
         ];
     };
-    case "CFP_I_WESTULTRA" : {
+    case "BRAF_Thugs" : {
         btc_type_motorized = btc_type_motorized + 
                             [
 							"CUP_I_Pickup_Unarmed_PMC", 
@@ -939,6 +939,13 @@ switch (_p_en) do {
                             [
 							"I_L_Criminal_SG_F", 
 							"I_L_Criminal_SMG_F", 
+                            "braf_factions_thug_rifleman", 
+                            "braf_factions_thug_at", 
+                            "braf_factions_thug_biker", 
+                            "braf_factions_thug_marksman", 
+                            "braf_factions_thug_pistol", 
+                            "braf_factions_thug_shotgun", 
+                            "braf_factions_thug_smg",
 							"I_L_Looter_SG_F", 
 							"I_L_Looter_SMG_F", 
 							"I_C_Soldier_Bandit_5_F", 
@@ -948,14 +955,25 @@ switch (_p_en) do {
 							"I_C_Soldier_Bandit_3_F", 
 							"I_C_Soldier_Bandit_8_F", 
 							"I_C_Soldier_Bandit_4_F", 
+                            "braf_factions_thug_rifleman", 
+                            "braf_factions_thug_at", 
+                            "braf_factions_thug_biker", 
+                            "braf_factions_thug_marksman", 
+                            "braf_factions_thug_pistol", 
+                            "braf_factions_thug_shotgun", 
+                            "braf_factions_thug_smg",
 							"CUP_I_PMC_Bodyguard_M4", 
-							"CUP_I_PMC_Contractor1", 
-							"CUP_I_PMC_Contractor2", 
+							"CUP_I_PMC_Contractor1",
 							"CUP_I_PMC_Medic", 
 							"CUP_I_PMC_Soldier_AT", 
 							"CUP_I_PMC_Soldier_M4A3", 
 							"CUP_I_PMC_Soldier", 
-							"CUP_I_PMC_Soldier_TL"
+                            "braf_factions_thug_at", 
+                            "braf_factions_thug_biker", 
+                            "braf_factions_thug_marksman", 
+                            "braf_factions_thug_pistol", 
+                            "braf_factions_thug_shotgun", 
+                            "braf_factions_thug_smg"
 							];
         btc_type_boats = 
         [
