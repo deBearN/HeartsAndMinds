@@ -68,7 +68,7 @@ for "_i" from 1 to _n do {
             {
                 private _word = _x;
                 {
-                    private _letterPos = _sel_pos getPos [_forEachIndex * (0.7 + random 0.2), _sel_dir -45];
+                    private _letterPos = _sel_pos getPos [_forEachIndex * 1, _sel_dir];
 
                     private _surface = surfaceNormal _letterPos;
                     private _v1 = vectorNormalized (_surface vectorMultiply -1);

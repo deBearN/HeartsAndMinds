@@ -1,8 +1,8 @@
 
 btc_version = [
     1,
-    24,
-    4
+    25,
+    0
 ];
 diag_log format (["=BTC= HEARTS AND MINDS VERSION %1.%2.%3"] + btc_version);
 
@@ -24,7 +24,8 @@ btc_p_change_weather = ("btc_p_change_weather" call BIS_fnc_getParamValue) isEqu
 
 //<< Respawn options >>
 btc_p_respawn_location = "btc_p_respawn_location" call BIS_fnc_getParamValue;
-btc_p_respawn_fromFOBToBase = ("btc_p_respawn_fromFOBToBase" call BIS_fnc_getParamValue) isEqualTo 1;
+btc_p_respawn_fromOutsideBase = "btc_p_respawn_fromOutsideBase" call BIS_fnc_getParamValue;
+btc_p_respawn_fromOutsideTimeout = "btc_p_respawn_fromOutsideTimeout" call BIS_fnc_getParamValue;
 btc_p_rallypointTimer = "btc_p_rallypointTimer" call BIS_fnc_getParamValue;
 btc_p_respawn_arsenal = ("btc_p_respawn_arsenal" call BIS_fnc_getParamValue) isEqualTo 1;
 btc_p_respawn_ticketsAtStart = "btc_p_respawn_ticketsAtStart" call BIS_fnc_getParamValue;
@@ -83,7 +84,8 @@ btc_p_civ_max_veh = "btc_p_civ_max_veh" call BIS_fnc_getParamValue;
 
 //<< Gameplay options >>
 btc_p_sea = ("btc_p_sea" call BIS_fnc_getParamValue) isEqualTo 1;
-btc_p_chem = ("btc_p_chem" call BIS_fnc_getParamValue) isEqualTo 1;
+btc_p_chem_sides = ("btc_p_chem_sides" call BIS_fnc_getParamValue) isEqualTo 1;
+btc_p_chem_cache_probability = ("btc_p_chem_cache_probability" call BIS_fnc_getParamValue)/100;
 btc_p_spect = ("btc_p_spect" call BIS_fnc_getParamValue) isEqualTo 1;
 btc_p_side_mission_cycle = "btc_p_side_mission_cycle" call BIS_fnc_getParamValue;
 
@@ -228,9 +230,9 @@ if (isServer) then {
 
     //Side
     btc_side_ID = 0;
-    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "civtreatment", "checkpoint", "convoy", "rescue", "capture_officer", "hostage", "hack", "kill", "EMP", "removeRubbish"]; // On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
+    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "civtreatment", "checkpoint", "convoy", "rescue", "capture_officer", "hostage", "hack", "kill", "EMP", "removeRubbish", "massacre"]; // On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
     if (btc_p_sea) then {btc_side_list append ["civtreatment_boat", "underwater_generator"]}; // On sea
-    if (btc_p_chem) then {btc_side_list append ["chemicalLeak", "pandemic"]};
+    if (btc_p_chem_sides) then {btc_side_list append ["chemicalLeak", "pandemic"]};
     btc_side_list_use = [];
     btc_type_tower = ["Land_Communication_F", "Land_TTowerBig_1_F", "Land_TTowerBig_2_F"];
     btc_type_barrel = ["Land_GarbageBarrel_01_F", "Land_BarrelSand_grey_F", "MetalBarrel_burning_F", "Land_BarrelWater_F", "Land_MetalBarrel_F", "Land_MetalBarrel_empty_F"];
@@ -297,6 +299,8 @@ if (isServer) then {
     btc_type_cargoEMP = _allClassSorted select {_x isKindOf "Cargo_EMP_base_F"};
     btc_type_antenna = _allClassSorted select {_x isKindOf "OmniDirectionalAntenna_01_base_F"};
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
+    btc_type_sports = (_allClassSorted select {_x isKindOf "SportItems_base_F"}) select {"ball" in _x};
+    btc_type_bottles = (_allClassSorted select {_x isKindOf "Items_base_F"}) select {"Bottle" in _x and (not ("stack" in _x))};
 
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,
@@ -432,9 +436,10 @@ btc_fob_structure = "Land_Cargo_HQ_V1_F";
 btc_fob_flag = "Brazil_Flag";
 btc_fob_id = 0;
 btc_fob_minDistance = 1500;
+btc_fob_timeout = 1 * 60;
 
 //IED
-btc_type_ieds_ace = ["APERSTripMine"];
+btc_type_ieds_ace = ["APERSTripMine","APERSTripMine"];
 btc_ied_deleteOn = -1;
 
 //Int
@@ -1005,6 +1010,17 @@ switch (_p_en) do {
             "CFP_C_ASIA_Fishing_Boat_01", 
             "CUP_C_PBX_CIV"
         ];
+        btc_type_mg = 
+        [
+            "O_G_HMG_02_high_F",
+            "O_G_HMG_02_F", 
+            "cfp_i_alNusra_KORD", 
+            "cfp_i_alNusra_DSHKM", 
+            "cfp_i_is_M2Static_MiniTripod", 
+            "cfp_i_is_M2Static", 
+            "cfp_i_is_KORD_high", 
+            "cfp_i_is_DSHkM_Mini_TriPod"
+        ];
 
     };
 };
@@ -1017,10 +1033,10 @@ btc_spect_range = 1000;
 btc_spect_updateOn = -1;
 
 //Rep
-btc_rep_bonus_cache = 200;
-btc_rep_bonus_civ_hh = 3;
+btc_rep_bonus_cache = 600;
+btc_rep_bonus_civ_hh = 6;
 btc_rep_bonus_disarm = 30;
-btc_rep_bonus_hideout = 500;
+btc_rep_bonus_hideout = 900;
 btc_rep_bonus_mil_killed = 1;
 btc_rep_bonus_IEDCleanUp = 10;
 btc_rep_bonus_removeTag = 5;
@@ -1031,9 +1047,9 @@ btc_rep_malus_civ_hd = - 4;
 btc_rep_malus_animal_hd = - 2;
 btc_rep_malus_civ_killed = - 50;
 btc_rep_malus_animal_killed = - 25;
-btc_rep_malus_civ_suppressed = - 10;
+btc_rep_malus_civ_suppressed = - 0.1;
 btc_rep_malus_player_respawn = - 0.1;
-btc_rep_malus_veh_killed = - 25;
+btc_rep_malus_veh_killed = - 25.01;
 btc_rep_malus_building_damaged = - 5;
 btc_rep_malus_building_destroyed = - 50;
 btc_rep_malus_foodRemove = - btc_rep_bonus_foodGive;
@@ -1059,7 +1075,7 @@ btc_flag_textures = [
     "\A3\Data_F\Flags\flag_red_CO.paa",
     "\A3\Data_F\Flags\flag_green_CO.paa",
     "\A3\Data_F\Flags\flag_blue_CO.paa",
-    '#(argb,8,8,3)color(0.9,0.9,0,1)',
+    "z\ace\addons\flags\data\Flag_yellow_co.paa",
     "\A3\Data_F\Flags\flag_NATO_CO.paa"
 ];
 
@@ -1067,4 +1083,4 @@ btc_flag_textures = [
 btc_body_bagTicketPlayer = 1;
 btc_body_prisonerTicket = 1;
 
-btc_startDate = [2024, 6, 24, 12, 15];
+btc_startDate = [2025, 6, 24, 12, 15];

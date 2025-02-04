@@ -40,14 +40,17 @@ if (btc_debug_log) then {
 };
 
 private _wreck = createSimpleObject [_type, _pos];
-_wreck setPosATL [(_pos select 0)+35, (_pos select 1)+35, -0.05];
+_wreck setPosATL [(_pos select 0)+45, (_pos select 1)+45, -0.05];
 _wreck setDir _dir;
 _wreck setVectorUp surfaceNormal _pos;
 
 if !(_active) exitWith {[_wreck, _type, objNull]};
 
-private _ied = createMine [selectRandom btc_type_ieds_ace, [(_pos select 0)+36.3, (_pos select 1)+35, btc_ied_offset], [], 0]; // posicao do explosivo
+private _ied = createMine [selectRandom btc_type_ieds_ace, [(_pos select 0)+46.3, (_pos select 1)+45, btc_ied_offset], [], 0]; // posicao do explosivo
 _ied setVectorUp surfaceNormal _pos;
+independent revealMine _ied;
+east revealMine _ied;
+civilian revealMine _ied;
 
 _pos params ["_xx", "_yy", "_zz"];
 _ied_list pushBack [_ied, _wreck, [_xx, _yy, _zz + 0.5]];

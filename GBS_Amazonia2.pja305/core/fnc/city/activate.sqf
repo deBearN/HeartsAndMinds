@@ -54,14 +54,15 @@ private _spawningRadius = _cachingRadius/2;
 
 if (!(_city getVariable ["initialized", false])) then {
     private _numberOfIED = (switch _type do {
-        case "Hill" : {10};
+        case "Hill" : {23};
         case "VegetationFir" : {10};
         case "BorderCrossing" : {12};
         case "NameLocal" : {12.5};
-        case "StrongpointArea" : {13};
-        case "NameVillage" : {13.5};
-        case "NameCity" : {15};
-        case "NameCityCapital" : {16};
+        case "StrongpointArea" : {23};
+        case "NameVillage" : {15};
+        case "NameCity" : {5};
+        case "Invisible" : {23};
+        case "NameCityCapital" : {6};
         case "Airport" : {0};
         case "NameMarine" : {0};
         default {0};
@@ -70,10 +71,10 @@ if (!(_city getVariable ["initialized", false])) then {
     if (_has_en) then {
         _numberOfIED = _numberOfIED * 1.5;
     } else {
-        _numberOfIED = _numberOfIED * 0.75;
+        _numberOfIED = _numberOfIED * 0.1;
     };
     if (_has_ho) then {
-        _numberOfIED = _numberOfIED * 2;
+        _numberOfIED = _numberOfIED * 2.2;
     };
 
     if (btc_debug_log) then {
@@ -97,7 +98,7 @@ if (_data_units isNotEqualTo []) then {
 } else {
     // Maximum number of enemy group
     private _numberOfGroup = (switch _type do {
-        case "Hill" : {4};
+        case "Hill" : {8};
         case "VegetationFir" : {4};
         case "BorderCrossing" : {7};
         case "NameLocal" : {7};
@@ -105,6 +106,7 @@ if (_data_units isNotEqualTo []) then {
         case "NameVillage" : {8};
         case "NameCity" : {16};
         case "NameCityCapital" : {32};
+        case "Invisible" : {38};
         case "Airport" : {32};
         case "NameMarine" : {4};
         default {0};
@@ -302,6 +304,11 @@ if (btc_p_info_houseDensity > 0) then {
 private _civKilled = _city getVariable ["btc_rep_civKilled", []];
 if (_civKilled isNotEqualTo []) then {
     [[_city, _civKilled], btc_civ_fnc_createFlower] call btc_delay_fnc_exec;
+};
+
+private _grave = _city getVariable ["btc_rep_graves", []];
+if (_grave isNotEqualTo []) then {
+    [[_city, _grave], btc_civ_fnc_createGrave] call btc_delay_fnc_exec;
 };
 
 [{

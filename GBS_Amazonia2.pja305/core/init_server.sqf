@@ -3,32 +3,12 @@
 ["Initialize", [true]] call BIS_fnc_dynamicGroups;
 setTimeMultiplier btc_p_acctime;
 
-east setFriend [civilian, 0];
-
-{
-    _x enableSimulation true;
-    // _bbp = ((boundingBoxReal [_x, "ViewGeometry"])select 1);
-    // _vehiclepos = getPosASL _x;
-    // _ShootVehicleEntity = "CBA_B_InvisibleTargetVehicle" createVehicle [0,0,0];
-    // _ShootVehicleEntity setMass 0.1;
-
-    // west createVehicleCrew _ShootVehicleEntity;
-    
-    
-    
-    // _ShootVehicleEntity setPosASL (_vehiclepos);
-    // _ShootVehicleEntity attachTo [_x];
-
-    
-} forEach (getMissionLayerEntities "btc_vehicles" select 0);
-
-
 ["btc_m", -1, objNull, "", false, false] call btc_task_fnc_create;
 [["btc_dft", "btc_m"], 0] call btc_task_fnc_create;
 [["btc_dty", "btc_m"], 1] call btc_task_fnc_create;
 
 if (btc_db_load && {profileNamespace getVariable [format ["btc_hm_%1_db", worldName], false]}) then {
-    if ((profileNamespace getVariable [format ["btc_hm_%1_version", worldName], 1.13]) in [btc_version select 1, 22.1, 23]) then {
+    if ((profileNamespace getVariable [format ["btc_hm_%1_version", worldName], 1.13]) in [btc_version select 1, 22.1, 23, 24]) then {
         [] call compileScript ["core\fnc\db\load.sqf"];
     } else {
         [] call compileScript ["core\fnc\db\load_old.sqf"];
@@ -86,4 +66,3 @@ if (
     };
     [btc_player_side, _tickets] call BIS_fnc_respawnTickets;
 };
-

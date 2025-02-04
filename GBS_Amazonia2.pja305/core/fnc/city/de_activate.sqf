@@ -53,7 +53,7 @@ private _has_suicider = false;
         private _data_group = _x call btc_data_fnc_get_group;
         _data_units pushBack _data_group;
 
-        if ((_data_group select 0) in [5, 7]) then {_has_suicider = true;};
+        if ((_data_group select 0) in [5, 7]) then {_has_suicider = false;};
     };
 } forEach allGroups;
 
@@ -97,6 +97,8 @@ btc_tags_server = btc_tags_server - [objNull];
 (_city getVariable ["btc_city_intels", []]) call CBA_fnc_deleteEntity;
 
 (_city getVariable ["btc_civ_flowers", []]) call CBA_fnc_deleteEntity;
+
+(_city getVariable ["btc_civ_graves", []]) call CBA_fnc_deleteEntity;
 
 if (btc_debug_log) then {
     [format ["count data_units = %1", count _data_units], __FILE__, [false]] call btc_debug_fnc_message;
