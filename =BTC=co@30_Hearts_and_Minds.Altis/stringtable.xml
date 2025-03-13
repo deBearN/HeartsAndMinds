@@ -337,7 +337,7 @@
             <Key ID="STR_BTC_HAM_DOC_DOOR_TEXT">
                 <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;House doors:&lt;/marker&gt;&lt;br/&gt; Civilian house door can be close. Depend on reputation level, civilian will lock their door and stay inside. Under low, all doors are locked, above normal, all door are unlocked. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Break locked door:&lt;/marker&gt;&lt;br/&gt; You can still enter by breaking door lock with a wirecutter. &lt;img image='\z\ace\addons\logistics_wirecutter\ui\item_wirecutter_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; Or by using explosive. &lt;img image='\A3\EditorPreviews_F\Data\CfgVehicles\Claymore_F.jpg' width='355' height='200'/&gt; </Original>
                 <German>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Haustüren:&lt;/marker&gt;&lt;br/&gt; Türen von Häusern können geschlossen sein. Abhängig von der Reputation werden Zivilisten sich in ihren Häusern aufhalten und die Türen verschließen. Wenn Reputation ist unter Niedrig, alle Türen sind verschlossen, wenn über Normal, alle Türen sind offen. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Verschlossene Türen aufbrechen:&lt;/marker&gt;&lt;br/&gt; Du kannst verschlossene Türen mit dem Kabelschneider öffnen. &lt;img image='\z\ace\addons\logistics_wirecutter\ui\item_wirecutter_ca.paa' width='355' height='200'/&gt; Oder aufgesprengt werden. &lt;img image='\A3\EditorPreviews_F\Data\CfgVehicles\Claymore_F.jpg' width='355' height='200'/&gt; </German>
-                <Chinesesimp>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;屋门:&lt;/marker&gt;&lt;br/&gt; 平民居住的房屋可能会锁门。基于声誉水平, 平民将会锁上他们的屋门并待在屋里。在声誉低时, 所有屋门均会上锁, 在声誉一般时, 所有屋门均不会上锁。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;撬锁:&lt;/marker&gt;&lt;br/&gt; 你仍然可以使用剪线钳来撬锁, 从而进入房屋。&lt;img image='\z\ace\addons\logistics_wirecutter\ui\item_wirecutter_ca.paa' width='355' height='200'/&gt; 也可以使用炸药破门。 &lt;img image='\A3\EditorPreviews_F\Data\CfgVehicles\Claymore_F.jpg' width='355' height='200'/&gt; </Original></Chinesesimp>
+                <Chinesesimp>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;屋门:&lt;/marker&gt;&lt;br/&gt; 平民居住的房屋可能会锁门。基于声誉水平, 平民将会锁上他们的屋门并待在屋里。在声誉低时, 所有屋门均会上锁, 在声誉一般时, 所有屋门均不会上锁。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;撬锁:&lt;/marker&gt;&lt;br/&gt; 你仍然可以使用剪线钳来撬锁, 从而进入房屋。&lt;img image='\z\ace\addons\logistics_wirecutter\ui\item_wirecutter_ca.paa' width='355' height='200'/&gt; 也可以使用炸药破门。 &lt;img image='\A3\EditorPreviews_F\Data\CfgVehicles\Claymore_F.jpg' width='355' height='200'/&gt; </Chinesesimp>
                 <Czech>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;House doors:&lt;/marker&gt;&lt;br/&gt; Dveře civilního domu lze zavřít. V závislosti na úrovni reputace civilista zamkne dveře a zůstane uvnitř. Při nízkém jsou všechny dveře zamčené, nad normálem jsou všechny dveře odemčené. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Rozbijte zamčené dveře:&lt;/marker&gt;&lt;br/&gt; Stále můžete vstoupit rozbitím zámku dveří velkými kleštěmi. &lt;img image='\z\ace\addons\logistics_wirecutter\ui\item_wirecutter_ca.paa' width='355' height='200'/&gt; Nebo pomocí výbušniny. &lt;img image='\A3\EditorPreviews_F\Data\CfgVehicles\Claymore_F.jpg' width='355' height='200'/&gt; </Czech>
                 <French>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Portes:&lt;/marker&gt;&lt;br/&gt; Les portes des maisons civiles peuvent être fermées. Selon le niveau de réputation, le civil verrouillera sa porte et restera à l’intérieur. En réputation basse, toutes les portes sont verrouillées, au-dessus de normale, toutes les portes sont déverrouillées. &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Porte verrouillée:&lt;/marker&gt;&lt;br/&gt; Vous pouvez toujours entrer en cassant la serrure avec une pince coupante. &lt;img image='\z\ace\addons\logistics_wirecutter\ui\item_wirecutter_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; Ou en utilisant des explosifs. &lt;img image='\A3\EditorPreviews_F\Data\CfgVehicles\Claymore_F.jpg' width='355' height='200'/&gt; </French>
             </Key>
@@ -780,18 +780,23 @@
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TIMEOUTFOBHELIVEHIPLAYER">
                 <Original>FOB, Helo, Transport helicopter, Transport vehicle and Player</Original>
+                <French>FOB, Hélicoptère, Hélicoptère de transport, Véhicule de transport et Joueur</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TIMEOUTFOBHELOVEHIPLAYER">
                 <Original>Helo, Transport helicopter, Transport vehicle and Player</Original>
+                <French>Hélicoptère, Hélicoptère de transport, Véhicule de transport et Joueur</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TIMEOUTHELIVEHIPLAYER">
                 <Original>Transport helicopter, Transport vehicle and Player</Original>
+                <French>Hélicoptère de transport, Véhicule de transport et Joueur</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TIMEOUTVEHIPLAYER">
                 <Original>Transport vehicle and Player</Original>
+                <French>Véhicule de transport et Joueur</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TIMEOUTPLAYER">
                 <Original>Player</Original>
+                <French>Joueur</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_REDEPLOYFOB">
                 <Original>Re-deploy FOB/vehicles</Original>
@@ -1951,15 +1956,19 @@
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MASSACRE_TITLE">
                 <Original>%1 massacre</Original>
+                <French>%1 massacre</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MASSACRE_DESC">
                 <Original>Civilians were brutally killed in %1. They are requesting your help to move dead bodies in a grave next to a religious building. To locate killed civilians go to the subtask.</Original>
+                <French>Des civils ont été sauvagement tués en %1. Ils demandent votre aide pour déplacer les cadavres dans une tombe à côté d'un édifice religieux. Pour localiser les civils tués, ouvrez la sous-tâche.</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MASSACRE_C_TITLE">
                 <Original>%1</Original>
+                <French>%1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MASSACRE_C_DESC">
                 <Original>Move this killed civilian next to a church and dig a grave.</Original>
+                <French>Déplacez ce civil tué près d'une église et creusez une tombe.</French>
             </Key>
         </Container>
     </Package>
