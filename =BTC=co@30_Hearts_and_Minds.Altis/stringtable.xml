@@ -780,11 +780,11 @@
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TIMEOUTFOBHELIVEHIPLAYER">
                 <Original>FOB, Helo, Transport helicopter, Transport vehicle and Player</Original>
-                <French>FOB, Hélicoptère, Hélicoptère de transport, Véhicule de transport et Joueur</French>
+                <French>FOB, Helo, Hélicoptère de transport, Véhicule de transport et Joueur</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TIMEOUTFOBHELOVEHIPLAYER">
                 <Original>Helo, Transport helicopter, Transport vehicle and Player</Original>
-                <French>Hélicoptère, Hélicoptère de transport, Véhicule de transport et Joueur</French>
+                <French>Helo, Hélicoptère de transport, Véhicule de transport et Joueur</French>
             </Key>
             <Key ID="STR_BTC_HAM_RESP_TIMEOUTHELIVEHIPLAYER">
                 <Original>Transport helicopter, Transport vehicle and Player</Original>
